@@ -20,7 +20,8 @@ def data_input():
     """
     This function asks the user for the location of the csv file to be processed,
     Creates a numpy array of the data and returns it.
-    :return: data.
+
+    :return: The data collected from the user in a 2D array with columns of x and y.
     """
 
     print('Hey there!, Welcome.')
@@ -40,7 +41,10 @@ def peak_analysis(raw_data, cut_off):
     """
     This function takes in the data and returns a list of x y values of the peaks.
     The find_peaks function in scipy returns the indices of the peaks, we need the x and y values
-    :return: peaks.
+
+    :param raw_data: The raw data obtained from the user(Spectrum)
+    :param cut_off: The minimum intensity required for a peak to be selected
+    :return: a list of x and y data of the peaks.
     """
 
     # Using the Y values to find the peaks
@@ -60,6 +64,22 @@ def peak_analysis(raw_data, cut_off):
         j += 1
 
     return peak_list
+
+
+def element_comparison(raw_data, peak_data, element_list):
+    """
+    This function will look through a database of csv files, in which each file is named as element.csv where element
+    will be the atomic symbol for the element it represents.
+    Then it will compare the standard peaks of each element with the peaks in the data from the spectrum.
+    The comparison will be made allowing an error in x. If the number of peaks that match are above a specific threshold
+    the element will be added to a list.
+    after comparing all elements given in the element_list the list of passed elements will be returned.
+
+    :param raw_data: The raw data array of the spectrum.
+    :param peak_data: The list of peaks in the given data.
+    :param element_list: The list of elements to checked from the database.
+    :return: A list of elements that successfully passed the comparison
+    """
 
 
 data = data_input()
