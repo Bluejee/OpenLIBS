@@ -36,11 +36,41 @@ def data_input():
     return np.genfromtxt(location_data, delimiter=',')
 
 
+def peak_analysis(raw_data, cut_off):
+    """
+    This function takes in the data and returns a list of x y values of the peaks.
+    The find_peaks function in scipy returns the indices of the peaks, we need the x and y values
+    :return: peaks.
+    """
+
+    # Using the Y values to find the peaks
+    # _ is to just ignore the other return values
+
+    peak_indices, _ = find_peaks(raw_data[:, 1], threshold=cut_off)
+    print(peak_indices, len(peak_indices))
+    # Initialising the list of peaks using number of rows
+    peak_list = np.zeros((len(peak_indices), 2))
+
+    # Copying the X Y values based on calculated Indices.
+
+    j = 0
+    for i in peak_indices:
+        peak_list[j, 0] = raw_data[i, 0]
+        peak_list[j, 1] = raw_data[i, 1]
+        j += 1
+
+    return peak_list
+
+
 data = data_input()
+peaks = peak_analysis(data, 1600)
 
 # Test
 print(data)
-plt.plot(data[:, 0], data[:, 1])
+print(peaks)
+plt.plot(data[:, 0], data[:, 1], 'b-')
+plt.plot(peaks[:, 0], peaks[:, 1], 'ro')
+
 plt.show()
 # End Test
 
