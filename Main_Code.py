@@ -97,15 +97,17 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
         # While loop will run till one of the data set runs out.
         while standard_peak_pos < standard_data_len and peak_data_pos < peak_data_len:
+
             # Using \ to use 2 lines as line is too long
-            if standard_data[standard_peak_pos] - error_bar <= peak_data[peak_data_pos, 0] <= \
+            if peak_data[peak_data_pos, 0] > standard_data[standard_peak_pos]:
+                standard_peak_pos += 1
+            elif standard_data[standard_peak_pos] - error_bar <= peak_data[peak_data_pos, 0] <= \
                     standard_data[standard_peak_pos] + error_bar:
                 num_matching_peaks += 1
                 peak_data_pos += 1
                 standard_peak_pos += 1
             else:
                 peak_data_pos += 1
-            # Alternatively a single peak_data_pos += 1 outside the else would also work fine.
 
         # Checking if the element is present.
         if num_matching_peaks >= match_threshold:
@@ -117,15 +119,17 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
 data = data_input()
 peaks = peak_analysis(data, 3)
-elements_present = element_comparison(peaks, ['H'])
+elements_present = element_comparison(peaks, ['Test'])
 
 # Test
+print('Data :: ')
 print(data)
+print('Peaks :: ')
 print(peaks)
+print('Elements present :: ')
 print(elements_present)
 plt.plot(data[:, 0], data[:, 1], 'b-')
 plt.plot(peaks[:, 0], peaks[:, 1], 'ro')
-
 plt.show()
 # End Test
 
