@@ -77,10 +77,9 @@ def element_comparison(raw_data, peak_data, element_list):
 
     :param raw_data: The raw data array of the spectrum.
     :param peak_data: The list of peaks in the given data.
-    :param element_list: The list of elements to checked from the database.
+    :param element_list: The list of elements to checked from the database.what
     :return: A list of elements that successfully passed the comparison
     """
-
 
 data = data_input()
 peaks = peak_analysis(data, 1600)
