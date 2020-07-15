@@ -117,10 +117,12 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
 data = data_input()
 peaks = peak_analysis(data, 3)
+elements_present = element_comparison(peaks, ['H'])
 
 # Test
 print(data)
 print(peaks)
+print(elements_present)
 plt.plot(data[:, 0], data[:, 1], 'b-')
 plt.plot(peaks[:, 0], peaks[:, 1], 'ro')
 
