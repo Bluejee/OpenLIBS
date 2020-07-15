@@ -50,7 +50,7 @@ def peak_analysis(raw_data, cut_off):
     # Using the Y values to find the peaks
     # _ is to just ignore the other return values
 
-    peak_indices, _ = find_peaks(raw_data[:, 1], threshold=cut_off)
+    peak_indices, _ = find_peaks(raw_data[:, 1], height=cut_off)
     print(peak_indices, len(peak_indices))
     # Initialising the list of peaks using number of rows
     peak_list = np.zeros((len(peak_indices), 2))
@@ -80,6 +80,7 @@ def element_comparison(raw_data, peak_data, element_list):
     :param element_list: The list of elements to checked from the database.what
     :return: A list of elements that successfully passed the comparison
     """
+
 
 data = data_input()
 peaks = peak_analysis(data, 1600)
