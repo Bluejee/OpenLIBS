@@ -83,7 +83,7 @@ def element_comparison(raw_data, peak_data, element_list):
 
 
 data = data_input()
-peaks = peak_analysis(data, 1600)
+peaks = peak_analysis(data, 3)
 
 # Test
 print(data)
