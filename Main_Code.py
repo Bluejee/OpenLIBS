@@ -40,7 +40,7 @@ def data_input():
 def peak_analysis(raw_data, cut_off):
     """
     This function takes in the data and returns a list of x y values of the peaks.
-    The find_peaks function in scipy returns the indices of the peaks, we need the x and y values
+    The find_peaks function in Scipy returns the indices of the peaks, we need the x and y values
 
     :param raw_data: The raw data obtained from the user(Spectrum)
     :param cut_off: The minimum intensity required for a peak to be selected
@@ -66,7 +66,7 @@ def peak_analysis(raw_data, cut_off):
     return peak_list
 
 
-def element_comparison(raw_data, peak_data, element_list):
+def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3):
     """
     This function will look through a database of csv files, in which each file is named as element.csv where element
     will be the atomic symbol for the element it represents.
@@ -75,11 +75,44 @@ def element_comparison(raw_data, peak_data, element_list):
     the element will be added to a list.
     after comparing all elements given in the element_list the list of passed elements will be returned.
 
-    :param raw_data: The raw data array of the spectrum.
     :param peak_data: The list of peaks in the given data.
-    :param element_list: The list of elements to checked from the database.what
-    :return: A list of elements that successfully passed the comparison
+    :param element_list: The list of elements to be checked from the database.
+    :param error_bar: The error in wavelength within which a peak can be matched with the standard,
+    set to 0.1nm as default.
+    :param match_threshold: The number of peaks that has to match with the standard for the element to be present
+    in the sample, set to 3 as default.
+    :return: A list of elements that successfully passed the comparison.
     """
+
+    passed_elements = []
+
+    # Running through all elements in the given list.
+    for element in element_list:
+        standard_data = np.genfromtxt('Element_Database\\' + element + '.csv', delimiter=',')
+        standard_data_len = len(standard_data)
+        peak_data_len = len(peak_data)
+        num_matching_peaks = 0
+        standard_peak_pos = 0
+        peak_data_pos = 0
+
+        # While loop will run till one of the data set runs out.
+        while standard_peak_pos < standard_data_len and peak_data_pos < peak_data_len:
+            # Using \ to use 2 lines as line is too long
+            if standard_data[standard_peak_pos] - error_bar <= peak_data[peak_data_pos, 0] <= \
+                    standard_data[standard_peak_pos] + error_bar:
+                num_matching_peaks += 1
+                peak_data_pos += 1
+                standard_peak_pos += 1
+            else:
+                peak_data_pos += 1
+            # Alternatively a single peak_data_pos += 1 outside the else would also work fine.
+
+        # Checking if the element is present.
+        if num_matching_peaks >= match_threshold:
+            passed_elements.append(element)
+
+    # Now the passed_elements list will have all the elements in the sample.
+    return passed_elements
 
 
 data = data_input()
