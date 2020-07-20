@@ -17,6 +17,10 @@ element = input('Enter the name of the Element :: ')
 
 data = np.genfromtxt('Element_Database/Workbench.csv', delimiter=',')
 
+# Converting from Angstrom to nm
+for i in range(len(data)):
+    data[i] = data[i]/10
+
 data.view('f8,f8,f8').sort(order=['f0'], axis=0)
 
 np.savetxt(element + '.csv', data, delimiter=',')
