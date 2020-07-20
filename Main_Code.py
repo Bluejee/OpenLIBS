@@ -124,7 +124,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
 data = data_input()
 peaks = peak_analysis(data, 10000)
-elements_present, match = element_comparison(peaks, ['Cu'])
+elements_present, match = element_comparison(peaks, ['Cu'],error_bar=0.5)
 
 # Test
 print('Data :: ')
@@ -138,6 +138,13 @@ print(elements_present)
 plt.plot(data[:, 0], data[:, 1], 'k-')
 plt.plot(peaks[:, 0], peaks[:, 1], 'bo')
 plt.plot(match[:, 0], match[:, 1], 'go')
+
+# Expected peaks in copper
+copper = np.genfromtxt('Element_Database/Cu.csv', delimiter=',')
+coppery = np.zeros(len(copper))
+coppery = coppery + 100000
+plt.plot(copper,coppery,'yo')
+
 plt.show()
 # End Test
 
