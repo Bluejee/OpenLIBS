@@ -23,4 +23,4 @@ for i in range(len(data)):
 
 data.view('f8,f8,f8').sort(order=['f0'], axis=0)
 
-np.savetxt(element + '.csv', data, delimiter=',')
+np.savetxt('Element_Database/'+element + '.csv', data, delimiter=',')

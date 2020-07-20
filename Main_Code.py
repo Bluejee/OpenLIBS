@@ -119,7 +119,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
 data = data_input()
 peaks = peak_analysis(data, 3)
-elements_present = element_comparison(peaks, ['Test'])
+elements_present = element_comparison(peaks, ['Cu'])
 
 # Test
 print('Data :: ')
