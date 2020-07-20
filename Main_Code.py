@@ -74,6 +74,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
     The comparison will be made allowing an error in x. If the number of peaks that match are above a specific threshold
     the element will be added to a list.
     after comparing all elements given in the element_list the list of passed elements will be returned.
+    The program will also return a list of peaks(Wavelengths) for the purpose of plotting.
 
     :param peak_data: The list of peaks in the given data.
     :param element_list: The list of elements to be checked from the database.
@@ -81,10 +82,11 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
     set to 0.1nm as default.
     :param match_threshold: The number of peaks that has to match with the standard for the element to be present
     in the sample, set to 3 as default.
-    :return: A list of elements that successfully passed the comparison.
+    :return: A list of elements that successfully passed the comparison and a list of matched peaks.
     """
 
     passed_elements = []
+    matched_peaks = []
 
     # Running through all elements in the given list.
     for element in element_list:
@@ -99,10 +101,13 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
         while standard_peak_pos < standard_data_len and peak_data_pos < peak_data_len:
 
             # Using \ to use 2 lines as line is too long
+            # Using peak_data[peak_position,0] as we only compare the wavelength in column 1
             if peak_data[peak_data_pos, 0] > standard_data[standard_peak_pos]:
                 standard_peak_pos += 1
             elif standard_data[standard_peak_pos] - error_bar <= peak_data[peak_data_pos, 0] <= \
                     standard_data[standard_peak_pos] + error_bar:
+                # Using peak_data[peak_position] returns the x and y for plotting
+                matched_peaks.append([peak_data[peak_data_pos, 0], peak_data[peak_data_pos, 1]])
                 num_matching_peaks += 1
                 peak_data_pos += 1
                 standard_peak_pos += 1
@@ -114,12 +119,12 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
             passed_elements.append(element)
 
     # Now the passed_elements list will have all the elements in the sample.
-    return passed_elements
+    return passed_elements, np.array(matched_peaks)
 
 
 data = data_input()
-peaks = peak_analysis(data, 3)
-elements_present = element_comparison(peaks, ['Cu'])
+peaks = peak_analysis(data, 10000)
+elements_present, match = element_comparison(peaks, ['Cu'])
 
 # Test
 print('Data :: ')
@@ -128,8 +133,11 @@ print('Peaks :: ')
 print(peaks)
 print('Elements present :: ')
 print(elements_present)
-plt.plot(data[:, 0], data[:, 1], 'b-')
-plt.plot(peaks[:, 0], peaks[:, 1], 'ro')
+print('Matched peaks :: ')
+print(match)
+plt.plot(data[:, 0], data[:, 1], 'k-')
+plt.plot(peaks[:, 0], peaks[:, 1], 'bo')
+plt.plot(match[:, 0], match[:, 1], 'go')
 plt.show()
 # End Test
 
