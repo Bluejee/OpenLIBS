@@ -87,6 +87,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
     passed_elements = []
     matched_peaks = []
+    # matched_peaks will have all the matched peaks of all elements
 
     # Running through all elements in the given list.
     for element in element_list:
@@ -97,33 +98,47 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
         standard_peak_pos = 0
         peak_data_pos = 0
 
+        print('Comparison starts :: ')  # testing to delete
+
         # While loop will run till one of the data set runs out.
         while standard_peak_pos < standard_data_len and peak_data_pos < peak_data_len:
 
             # Using \ to use 2 lines as line is too long
             # Using peak_data[peak_position,0] as we only compare the wavelength in column 1
-            if peak_data[peak_data_pos, 0] > standard_data[standard_peak_pos]:
+            print('\n\n') # testing to delete
+            print('peak data position = ', peak_data_pos, 'standard data position = ', standard_peak_pos) # testing to delete
+            print('peak data value = ', peak_data[peak_data_pos, 0], 'std data value = ',
+                  standard_data[standard_peak_pos]) # testing to delete
+
+            if peak_data[peak_data_pos, 0] > standard_data[standard_peak_pos] + error_bar:
                 standard_peak_pos += 1
+                print('Peak data is greater than standard data do increasing standard data.') # testing to delete
             elif standard_data[standard_peak_pos] - error_bar <= peak_data[peak_data_pos, 0] <= \
                     standard_data[standard_peak_pos] + error_bar:
                 # Using peak_data[peak_position] returns the x and y for plotting
+                print('peak data in the region of error so increasing peak data and standard data.') # testing to delete
+                print('also increasing the number of matched peaks') # testing to delete
+
                 matched_peaks.append([peak_data[peak_data_pos, 0], peak_data[peak_data_pos, 1]])
                 num_matching_peaks += 1
                 peak_data_pos += 1
                 standard_peak_pos += 1
+                print('num_matched peaks = ',num_matching_peaks) # testing to delete
             else:
                 peak_data_pos += 1
+                print('Peak data is less than the standard data so increasing the peak data') # testing to delete
 
         # Checking if the element is present.
         if num_matching_peaks >= match_threshold:
+            print('Checking if element present') # testing to delete
             passed_elements.append(element)
-
+        print('Comparison Ends. \n\n') # testing to delete
     # Now the passed_elements list will have all the elements in the sample.
     return passed_elements, np.array(matched_peaks)
 
 
 data = data_input()
-peaks = peak_analysis(data, 10000)
+peaks = peak_analysis(data, 500)
 elements_present, match = element_comparison(peaks, ['Cu'], error_bar=0.5)
 
 # Test
@@ -146,13 +161,12 @@ for point in match:
 
 # Expected peaks in copper
 copper = np.genfromtxt('Element_Database/Cu.csv', delimiter=',')
-#for point in copper:
+# for point in copper:
 #    plt.axvline(x=point, ymin=0.01, ymax=0.75)
 
 coppery = np.zeros(len(copper))
 coppery = coppery + 100000
-plt.plot(copper,coppery,'yo')
-
+plt.plot(copper, coppery, 'yo')
 
 # Detected peeks = Blue dots
 # Expected peeks = yellow dots

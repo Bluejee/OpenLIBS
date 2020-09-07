@@ -19,7 +19,7 @@ data = np.genfromtxt('Element_Database/Workbench.csv', delimiter=',')
 
 # Converting from Angstrom to nm
 for i in range(len(data)):
-    data[i] = data[i]/10
+    data[i] = data[i]/1
 
 data = np.sort(data)
 
