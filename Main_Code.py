@@ -124,7 +124,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
 data = data_input()
 peaks = peak_analysis(data, 10000)
-elements_present, match = element_comparison(peaks, ['Cu'],error_bar=0.5)
+elements_present, match = element_comparison(peaks, ['Cu'], error_bar=0.5)
 
 # Test
 print('Data :: ')
@@ -137,13 +137,28 @@ print('Elements present :: ')
 print(elements_present)
 plt.plot(data[:, 0], data[:, 1], 'k-')
 plt.plot(peaks[:, 0], peaks[:, 1], 'bo')
+
+# plotting lines instead of points for matched peaks
 plt.plot(match[:, 0], match[:, 1], 'go')
+
+for point in match:
+    plt.axvline(x=point[0], ymin=0.01, color='r')
 
 # Expected peaks in copper
 copper = np.genfromtxt('Element_Database/Cu.csv', delimiter=',')
+#for point in copper:
+#    plt.axvline(x=point, ymin=0.01, ymax=0.75)
+
 coppery = np.zeros(len(copper))
 coppery = coppery + 100000
 plt.plot(copper,coppery,'yo')
+
+
+# Detected peeks = Blue dots
+# Expected peeks = yellow dots
+# Matched peeks = green dots
+# matched line = red
+
 
 plt.show()
 # End Test
