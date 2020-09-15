@@ -132,7 +132,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
         # Checking if the element is present.
         if num_matching_peaks >= match_threshold:
-            print('Checking if element present')  # testing to delete
+            print('\nElement present')  # testing to delete
             passed_elements.append(element)
         print('\nComparison Ends for element', element, '. \n\n')  # testing to delete
     # Now the passed_elements list will have all the elements in the sample.
@@ -152,6 +152,7 @@ print('Peaks :: ')
 print(peaks)
 print('Matched peaks :: ')
 print(match)
+print('Total number of Matched peaks = ',len(match))
 print('Elements present :: ')
 print(elements_present)
 plt.plot(data[:, 0], data[:, 1], 'k-')
