@@ -5,3 +5,15 @@ The original one was never added to GitHub.
 
 I wont be using my peak analysis software but instead be using the signal
 processing in SciPy to find the peaks.
+
+Na 
+Ca 
+Mg 
+Mn 
+Al 
+Fe 
+Ti 
+Si 
+O 
+H 
+N
