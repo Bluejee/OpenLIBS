@@ -98,7 +98,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
         standard_peak_pos = 0
         peak_data_pos = 0
 
-        print('Comparison starts :: ')  # testing to delete
+        print('Comparison starts for element', element, ':: ')  # testing to delete
 
         # While loop will run till one of the data set runs out.
         while standard_peak_pos < standard_data_len and peak_data_pos < peak_data_len:
@@ -134,7 +134,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
         if num_matching_peaks >= match_threshold:
             print('Checking if element present')  # testing to delete
             passed_elements.append(element)
-        print('Comparison Ends. \n\n')  # testing to delete
+        print('\nComparison Ends for element', element, '. \n\n')  # testing to delete
     # Now the passed_elements list will have all the elements in the sample.
     return passed_elements, np.array(matched_peaks)
 
@@ -143,7 +143,7 @@ data = data_input()
 peaks = peak_analysis(data, 500)
 elements_present, match = element_comparison(peaks,
                                              ['Cu', 'Al', 'Ca', 'Cr', 'Fe', 'K', 'Mg', 'Mn', 'Na', 'O', 'Si', 'Ti'],
-                                             error_bar=0.5)
+                                             error_bar=0.2)
 
 # Test
 print('Data :: ')
