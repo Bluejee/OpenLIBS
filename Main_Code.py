@@ -105,41 +105,45 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
             # Using \ to use 2 lines as line is too long
             # Using peak_data[peak_position,0] as we only compare the wavelength in column 1
-            print('\n\n') # testing to delete
-            print('peak data position = ', peak_data_pos, 'standard data position = ', standard_peak_pos) # testing to delete
+            print('\n\n')  # testing to delete
+            print('peak data position = ', peak_data_pos, 'standard data position = ',
+                  standard_peak_pos)  # testing to delete
             print('peak data value = ', peak_data[peak_data_pos, 0], 'std data value = ',
-                  standard_data[standard_peak_pos]) # testing to delete
+                  standard_data[standard_peak_pos])  # testing to delete
 
             if peak_data[peak_data_pos, 0] > standard_data[standard_peak_pos] + error_bar:
                 standard_peak_pos += 1
-                print('Peak data is greater than standard data do increasing standard data.') # testing to delete
+                print('Peak data is greater than standard data do increasing standard data.')  # testing to delete
             elif standard_data[standard_peak_pos] - error_bar <= peak_data[peak_data_pos, 0] <= \
                     standard_data[standard_peak_pos] + error_bar:
                 # Using peak_data[peak_position] returns the x and y for plotting
-                print('peak data in the region of error so increasing peak data and standard data.') # testing to delete
-                print('also increasing the number of matched peaks') # testing to delete
+                print(
+                    'peak data in the region of error so increasing peak data and standard data.')  # testing to delete
+                print('also increasing the number of matched peaks')  # testing to delete
 
                 matched_peaks.append([peak_data[peak_data_pos, 0], peak_data[peak_data_pos, 1]])
                 num_matching_peaks += 1
                 peak_data_pos += 1
                 standard_peak_pos += 1
-                print('num_matched peaks = ',num_matching_peaks) # testing to delete
+                print('num_matched peaks = ', num_matching_peaks)  # testing to delete
             else:
                 peak_data_pos += 1
-                print('Peak data is less than the standard data so increasing the peak data') # testing to delete
+                print('Peak data is less than the standard data so increasing the peak data')  # testing to delete
 
         # Checking if the element is present.
         if num_matching_peaks >= match_threshold:
-            print('Checking if element present') # testing to delete
+            print('Checking if element present')  # testing to delete
             passed_elements.append(element)
-        print('Comparison Ends. \n\n') # testing to delete
+        print('Comparison Ends. \n\n')  # testing to delete
     # Now the passed_elements list will have all the elements in the sample.
     return passed_elements, np.array(matched_peaks)
 
 
 data = data_input()
 peaks = peak_analysis(data, 500)
-elements_present, match = element_comparison(peaks, ['Cu','O'], error_bar=0.5)
+elements_present, match = element_comparison(peaks,
+                                             ['Cu', 'Al', 'Ca', 'Cr', 'Fe', 'K', 'Mg', 'Mn', 'Na', 'O', 'Si', 'Ti'],
+                                             error_bar=0.5)
 
 # Test
 print('Data :: ')
@@ -159,14 +163,17 @@ plt.plot(match[:, 0], match[:, 1], 'go')
 for point in match:
     plt.axvline(x=point[0], ymin=0.01, color='r')
 
+# The code below is for the test when copper is used.
+# Not to be used for other elements
+
 # Expected peaks in copper
-copper = np.genfromtxt('Element_Database/Cu.csv', delimiter=',')
+# copper = np.genfromtxt('Element_Database/Cu.csv', delimiter=',')
 # for point in copper:
 #    plt.axvline(x=point, ymin=0.01, ymax=0.75)
 
-coppery = np.zeros(len(copper))
-coppery = coppery + 100000
-plt.plot(copper, coppery, 'yo')
+# coppery = np.zeros(len(copper))
+# coppery = coppery + 100000
+# plt.plot(copper, coppery, 'yo')
 
 # Detected peeks = Blue dots
 # Expected peeks = yellow dots
