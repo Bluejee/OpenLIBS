@@ -141,16 +141,10 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
 data = data_input()
 peaks = peak_analysis(data, 5)
-# check_list = ['Cu', 'Al', 'Ca', 'Cr', 'Fe', 'K', 'Mg', 'Mn', 'Na', 'O', 'Si', 'Ti']
-check_list = ['O_Strong']
+check_list = ['Cu', 'Al', 'Ca', 'Cr', 'Fe', 'K', 'Mg', 'Mn', 'Na', 'O', 'Si', 'Ti']
+# check_list = ['O_Strong']
 # check_list = ['Cu']
-elements_present, match = element_comparison(peaks,
-                                             check_list,
-                                             error_bar=0.2)
-
-
-
-
+elements_present, match = element_comparison(peaks, check_list, error_bar=0.2)
 
 # Test
 print('Data :: ')
@@ -171,18 +165,14 @@ plt.plot(match[:, 0], match[:, 1], 'go')
 for point in match:
     plt.axvline(x=point[0], ymin=0.01, color='r')
 
-
-
-
-
 # The code below is for the test when Oxygen is used.
 # Not to be used for other elements
 
 # Expected peaks in Oxygen
-oxygen = np.genfromtxt('Element_Database/O_Strong.csv', delimiter=',')
-oxygen_y = np.zeros(len(oxygen))
-oxygen_y = oxygen_y + 100000
-plt.plot(oxygen, oxygen_y, 'yo')
+# oxygen = np.genfromtxt('Element_Database/O_Strong.csv', delimiter=',')
+# oxygen_y = np.zeros(len(oxygen))
+# oxygen_y = oxygen_y + 100000
+# plt.plot(oxygen, oxygen_y, 'yo')
 
 
 # The code below is for the test when copper is used.
