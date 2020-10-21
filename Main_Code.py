@@ -51,7 +51,11 @@ def peak_analysis(raw_data, cut_off):
     # _ is to just ignore the other return values
 
     peak_indices, _ = find_peaks(raw_data[:, 1], height=cut_off)
-    print(peak_indices, len(peak_indices))
+    print('\nNumber of Peaks =', len(peak_indices))
+    print('Peak Indices :: ')
+    print(peak_indices)
+
+
     # Initialising the list of peaks using number of rows
     peak_list = np.zeros((len(peak_indices), 2))
 
@@ -63,6 +67,8 @@ def peak_analysis(raw_data, cut_off):
         peak_list[j, 1] = raw_data[i, 1]
         j += 1
 
+    print('\nPeak List :: ')
+    print(peak_list,'\n\n')
     return peak_list
 
 
