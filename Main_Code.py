@@ -55,7 +55,6 @@ def peak_analysis(raw_data, cut_off):
     print('Peak Indices :: ')
     print(peak_indices)
 
-
     # Initialising the list of peaks using number of rows
     peak_list = np.zeros((len(peak_indices), 2))
 
@@ -68,7 +67,7 @@ def peak_analysis(raw_data, cut_off):
         j += 1
 
     print('\nPeak List :: ')
-    print(peak_list,'\n\n')
+    print(peak_list, '\n\n')
     return peak_list
 
 
@@ -148,9 +147,10 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 data = data_input()
 peaks = peak_analysis(data, 5)
 check_list = ['Cu', 'Al', 'Ca', 'Cr', 'Fe', 'K', 'Mg', 'Mn', 'Na', 'O', 'Si', 'Ti']
-# check_list = ['O_Strong']
+# check_list = ['Fe_Strong']
 # check_list = ['Cu']
-elements_present, match = element_comparison(peaks, check_list, error_bar=0.2)
+# check_list = ['Fe']
+elements_present, match = element_comparison(peaks, check_list, error_bar=0.05)
 
 # Test
 print('Data :: ')
