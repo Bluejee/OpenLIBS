@@ -146,10 +146,12 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
 data = data_input()
 peaks = peak_analysis(data, 5)
-check_list = ['Cu', 'Al', 'Ca', 'Cr', 'Fe', 'K', 'Mg', 'Mn', 'Na', 'O', 'Si', 'Ti']
-# check_list = ['Fe_Strong']
+check_list = ['Ag', 'Al', 'Au', 'B', 'C', 'Ca', 'Cl', 'Cr', 'Cu', 'Fe', 'K', 'Mg', 'Mn', 'Mo', 'N', 'Na', 'Ni', 'O',
+              'P', 'S', 'Si', 'Sn', 'Ti', 'Zn']
+# check_list = ['O_Strong', 'Fe_Strong']
 # check_list = ['Cu']
 # check_list = ['Fe']
+
 elements_present, match = element_comparison(peaks, check_list, error_bar=0.05)
 
 # Test
