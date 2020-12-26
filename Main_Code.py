@@ -139,21 +139,24 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
         if num_matching_peaks >= match_threshold:
             print('\nElement present')  # testing to delete
             passed_elements.append(element)
-        print('\nComparison Ends for element', element, '. \n\n')  # testing to delete
+        print('\n\n', num_matching_peaks, 'Peaks have matched for the element', element)
+        print('Comparison Ends for element', element, '. \n\n')  # testing to delete
     # Now the passed_elements list will have all the elements in the sample.
     return passed_elements, np.array(matched_peaks)
 
 
 data = data_input()
-peaks = peak_analysis(data, 5)
-check_list_all = ['Ag', 'Al', 'Ar', 'Au', 'B', 'C', 'Ca', 'Cl', 'Cr', 'Cu', 'Fe', 'Fe', 'K', 'Kr', 'Mg', 'Mn', 'Mo',
+peaks = peak_analysis(data, 500)
+check_list_all = ['Ag', 'Al', 'Ar', 'Au', 'B', 'C', 'Ca', 'Cl', 'Cr', 'Cu', 'Fe', 'K', 'Kr', 'Mg', 'Mn', 'Mo',
                   'N', 'Na', 'Ne', 'Ni', 'O', 'P', 'Rn', 'S', 'Si', 'Sn', 'Ti', 'Xe', 'Zn']
 check_list_strong = ['O_Strong', 'Fe_Strong']
 check_list_nobel_gas = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
+check_list_custom = ['Mn']  # , 'Mg', 'Si', 'Al', 'Ca', 'Ti', ]  # 'O_Strong', 'K', 'Cr']
+check_list_empty = ['']
 # check_list = ['Cu']
 # check_list = ['Mo']
 # check_list = ['Zn']
-elements_present, match = element_comparison(peaks, check_list_nobel_gas, error_bar=0.1)
+elements_present, match = element_comparison(peaks, check_list_custom, error_bar=0.2, match_threshold=1)
 
 # Test
 print('Data :: ')
@@ -205,5 +208,7 @@ for point in match:
 plt.show()
 # End Test
 
+# Location for the 3 samples
+# E:\Official_Project_Work\Spectra\Sample1.csv
 
 print('Thank You')
