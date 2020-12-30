@@ -8,6 +8,9 @@ The program flow can be described as :
 2. Run the workbench through a sorter.
 3. create a new CSV file.
 
+As i add new elements it becomes confusing at times so i am creating a new folder named new to which the new files will
+be saved. it can later be moved to the actual folder
+
 """
 
 import numpy as np
@@ -19,8 +22,8 @@ data = np.genfromtxt('Element_Database/Workbench.csv', delimiter=',')
 
 # Converting from Angstrom to nm
 for i in range(len(data)):
-    data[i] = data[i]/10
+    data[i] = data[i] / 10
 
 data = np.sort(data)
 
-np.savetxt('Element_Database/'+element + '.csv', data, delimiter=',')
+np.savetxt('Element_Database/New' + element + '.csv', data, delimiter=',')
