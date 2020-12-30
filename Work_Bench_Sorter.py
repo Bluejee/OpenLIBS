@@ -26,4 +26,4 @@ for i in range(len(data)):
 
 data = np.sort(data)
 
-np.savetxt('Element_Database/New' + element + '.csv', data, delimiter=',')
+np.savetxt('Element_Database/New/' + element + '.csv', data, delimiter=',')
