@@ -146,17 +146,39 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
 
 data = data_input()
-peaks = peak_analysis(data, 500)
-check_list_all = ['Ag', 'Al', 'Ar', 'Au', 'B', 'C', 'Ca', 'Cl', 'Cr', 'Cu', 'Fe', 'K', 'Kr', 'Mg', 'Mn', 'Mo',
-                  'N', 'Na', 'Ne', 'Ni', 'O', 'P', 'Rn', 'S', 'Si', 'Sn', 'Ti', 'Xe', 'Zn']
-check_list_strong = ['O_Strong', 'Fe_Strong']
+peaks = peak_analysis(data, 4000)
+
+check_list_persistent = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl',
+                         'Ar', 'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As',
+                         'Se', 'Br', 'Kr', 'Rb', 'Sr', 'Y', 'Zr', 'Nb', 'Mo', 'Tc', 'Ru', 'Rh', 'Pd', 'Ag', 'Cd', 'In',
+                         'Sn', 'Sb', 'Te', 'I', 'Xe', 'Cs', 'Ba', 'La', 'Ce', 'Pr', 'Nd', 'Pm', 'Sm', 'Eu', 'Gd', 'Tb',
+                         'Dy', 'Ho', 'Er', 'Tm', 'Yb', 'Lu', 'Hf', 'Ta', 'W', 'Re', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'Tl',
+                         'Pb', 'Bi', 'Po', 'At', 'Rn', 'Fr', 'Ra', 'Ac', 'Th', 'Pa', 'U', 'Np', 'Pu', 'Am', 'Cm', 'Bk',
+                         'Cf', 'Es']
+
+check_list_strong = ['H_Strong', 'He_Strong', 'Li_Strong', 'Be_Strong', 'B_Strong', 'C_Strong', 'N_Strong', 'O_Strong',
+                     'F_Strong', 'Ne_Strong', 'Na_Strong', 'Mg_Strong', 'Al_Strong', 'Si_Strong', 'P_Strong',
+                     'S_Strong', 'Cl_Strong', 'Ar_Strong', 'K_Strong', 'Ca_Strong', 'Sc_Strong', 'Ti_Strong',
+                     'V_Strong', 'Cr_Strong', 'Mn_Strong', 'Fe_Strong', 'Co_Strong', 'Ni_Strong', 'Cu_Strong',
+                     'Zn_Strong', 'Ga_Strong', 'Ge_Strong', 'As_Strong', 'Se_Strong', 'Br_Strong', 'Kr_Strong',
+                     'Rb_Strong', 'Sr_Strong', 'Y_Strong', 'Zr_Strong', 'Nb_Strong', 'Mo_Strong', 'Tc_Strong',
+                     'Ru_Strong', 'Rh_Strong', 'Pd_Strong', 'Ag_Strong', 'Cd_Strong', 'In_Strong', 'Sn_Strong',
+                     'Sb_Strong', 'Te_Strong', 'I_Strong', 'Xe_Strong', 'Cs_Strong', 'Ba_Strong', 'La_Strong',
+                     'Ce_Strong', 'Pr_Strong', 'Nd_Strong', 'Pm_Strong', 'Sm_Strong', 'Eu_Strong', 'Gd_Strong',
+                     'Tb_Strong', 'Dy_Strong', 'Ho_Strong', 'Er_Strong', 'Tm_Strong', 'Yb_Strong', 'Lu_Strong',
+                     'Hf_Strong', 'Ta_Strong', 'W_Strong', 'Re_Strong', 'Os_Strong', 'Ir_Strong', 'Pt_Strong',
+                     'Au_Strong', 'Hg_Strong', 'Tl_Strong', 'Pb_Strong', 'Bi_Strong', 'Po_Strong', 'At_Strong',
+                     'Rn_Strong', 'Fr_Strong', 'Ra_Strong', 'Ac_Strong', 'Th_Strong', 'Pa_Strong', 'U_Strong',
+                     'Np_Strong', 'Pu_Strong', 'Am_Strong', 'Cm_Strong', 'Bk_Strong', 'Cf_Strong', 'Es_Strong']
+
 check_list_nobel_gas = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
-check_list_custom = ['Mn']  # , 'Mg', 'Si', 'Al', 'Ca', 'Ti', ]  # 'O_Strong', 'K', 'Cr']
+
+check_list_custom = ['Cl']  # , 'Mg', 'Si', 'Al', 'Ca', 'Ti', ]  # 'O_Strong', 'K', 'Cr']
 check_list_empty = ['']
 # check_list = ['Cu']
 # check_list = ['Mo']
 # check_list = ['Zn']
-elements_present, match = element_comparison(peaks, check_list_custom, error_bar=0.2, match_threshold=1)
+elements_present, match = element_comparison(peaks, check_list_custom, error_bar=0.2, match_threshold=3)
 
 # Test
 print('Data :: ')
