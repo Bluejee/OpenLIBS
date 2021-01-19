@@ -16,6 +16,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
+# Functions
 def data_input():
     """
     This function asks the user for the location of the csv file to be processed,
@@ -145,8 +146,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
     return passed_elements, np.array(matched_peaks)
 
 
-data = data_input()
-peaks = peak_analysis(data, 4000)
+# Check lists for common applications.
 
 check_list_persistent = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Ne', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl',
                          'Ar', 'K', 'Ca', 'Sc', 'Ti', 'V', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As',
@@ -174,13 +174,28 @@ check_list_strong = ['H_Strong', 'He_Strong', 'Li_Strong', 'Be_Strong', 'B_Stron
 check_list_nobel_gas = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
 
 check_list_custom = ['Cl']  # , 'Mg', 'Si', 'Al', 'Ca', 'Ti', ]  # 'O_Strong', 'K', 'Cr']
+
+check_list_bronze_p = ['Cu', 'Sn']
+
+check_list_brass_p = ['Cu', 'Zn']
+
+check_list_bronze_s = ['Cu_Strong', 'Sn_Strong']
+
+check_list_brass_s = ['Cu_Strong', 'Zn_Strong']
+
 check_list_empty = ['']
-# check_list = ['Cu']
-# check_list = ['Mo']
-# check_list = ['Zn']
+
+
+# Input and Analysis
+
+data = data_input()
+peaks = peak_analysis(data, 4000)
+
 elements_present, match = element_comparison(peaks, check_list_custom, error_bar=0.2, match_threshold=3)
 
-# Test
+
+
+# Results
 print('Data :: ')
 print(data)
 print('Peaks :: ')
