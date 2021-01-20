@@ -72,6 +72,40 @@ def peak_analysis(raw_data, cut_off):
     return peak_list, peak_indices
 
 
+# Work in Progress.
+def wavelength_avg_half_maximum(peak_indices, peak_data, raw_data, error_bar=10):
+    """
+    This function will use the list of peaks, its indices and the raw data, to calculate the wavelength average, at half
+    the maximum intensity. This will take the intensity of the peak as the maximum, and then use the error bar to
+    calculate the x values at both the left and right side of the peak.
+
+    :param peak_indices: The indices of the peaks in the raw data.
+    :param peak_data: The list of peaks and corresponding intensities.
+    :param raw_data: The raw spectrum to be used in analysis.
+    :param error_bar: The factor within which the half intensity should lie for the wavelength to be selected.
+    :return: a list of x and y data of the peaks where x is the wavelength average at half max intensity and y is the
+    original intensity of the peak.
+    """
+
+    new_peak_list = []
+
+
+# Work in Progress.
+def peak_function_fit(peak_data, raw_data):
+    """
+    This function is still a thought in progress,
+        1. the function starts from the raw data, the first point, and then collects all points till the end of the
+        first peak, then fits it using a gaussian or lagrangian fit. then repeats this process to completely and
+        individually fit all peaks.
+        2. The function uses the list of all peaks and the raw data to fit each peak and return the list of peaks and
+        corresponding intensities.
+
+    :param peak_data: The list of peaks and corresponding intensities.
+    :param raw_data: The raw spectrum to be used in analysis.
+    :return:
+    """
+
+
 def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3):
     """
     This function will look through a database of csv files, in which each file is named as element.csv where element
