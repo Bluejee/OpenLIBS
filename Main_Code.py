@@ -45,7 +45,7 @@ def peak_analysis(raw_data, cut_off):
 
     :param raw_data: The raw data obtained from the user(Spectrum)
     :param cut_off: The minimum intensity required for a peak to be selected
-    :return: a list of x and y data of the peaks.
+    :return: a list of x and y data of the peaks, and the indexes of the position of the peaks in the raw data.
     """
 
     # Using the Y values to find the peaks
@@ -69,7 +69,7 @@ def peak_analysis(raw_data, cut_off):
 
     print('\nPeak List :: ')
     print(peak_list, '\n\n')
-    return peak_list
+    return peak_list, peak_indices
 
 
 def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3):
@@ -185,15 +185,12 @@ check_list_brass_s = ['Cu_Strong', 'Zn_Strong']
 
 check_list_empty = ['']
 
-
 # Input and Analysis
 
 data = data_input()
-peaks = peak_analysis(data, 4000)
+peaks, indices = peak_analysis(data, 4000)
 
-elements_present, match = element_comparison(peaks, check_list_custom, error_bar=0.2, match_threshold=3)
-
-
+elements_present, match = element_comparison(peaks, check_list_persistent, error_bar=0.2, match_threshold=3)
 
 # Results
 print('Data :: ')
