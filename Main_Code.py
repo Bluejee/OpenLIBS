@@ -127,6 +127,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
     passed_elements = []
     matched_peaks = []
+    standard_matched_peaks = []
     # matched_peaks will have all the matched peaks of all elements
 
     # Running through all elements in the given list.
@@ -162,6 +163,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
                 print('also increasing the number of matched peaks')  # testing to delete
 
                 matched_peaks.append([peak_data[peak_data_pos, 0], peak_data[peak_data_pos, 1]])
+                standard_matched_peaks.append(standard_data[standard_peak_pos])
                 num_matching_peaks += 1
                 peak_data_pos += 1
                 standard_peak_pos += 1
@@ -177,7 +179,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
         print('\n\n', num_matching_peaks, 'Peaks have matched for the element', element)
         print('Comparison Ends for element', element, '. \n\n')  # testing to delete
     # Now the passed_elements list will have all the elements in the sample.
-    return passed_elements, np.array(matched_peaks)
+    return passed_elements, np.array(matched_peaks), np.array(standard_matched_peaks)
 
 
 # Check lists for common applications.
@@ -207,7 +209,8 @@ check_list_strong = ['H_Strong', 'He_Strong', 'Li_Strong', 'Be_Strong', 'B_Stron
 
 check_list_nobel_gas = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
 
-check_list_custom = ['Cl']  # , 'Mg', 'Si', 'Al', 'Ca', 'Ti', ]  # 'O_Strong', 'K', 'Cr']
+# check_list_custom = ['Sr', 'Ca']
+check_list_custom = ['Sn']
 
 check_list_bronze_p = ['Cu', 'Sn']
 
@@ -222,9 +225,9 @@ check_list_empty = ['']
 # Input and Analysis
 
 data = data_input()
-peaks, indices = peak_analysis(data, 4000)
+peaks, indices = peak_analysis(data, 0)
 
-elements_present, match = element_comparison(peaks, check_list_persistent, error_bar=0.2, match_threshold=3)
+elements_present, match_data, match_std = element_comparison(peaks, check_list_custom, error_bar=0.2, match_threshold=3)
 
 # Results
 print('Data :: ')
@@ -232,18 +235,23 @@ print(data)
 print('Peaks :: ')
 print(peaks)
 print('Matched peaks :: ')
-print(match)
-print('Total number of Matched peaks = ', len(match))
+print(match_data)
+print('Total number of Matched peaks = ', len(match_data))
 print('Elements present :: ')
 print(elements_present)
 plt.plot(data[:, 0], data[:, 1], 'k-')
 plt.plot(peaks[:, 0], peaks[:, 1], 'bo')
 
 # plotting lines instead of points for matched peaks
-plt.plot(match[:, 0], match[:, 1], 'go')
+plt.plot(match_data[:, 0], match_data[:, 1], 'go')
 
-for point in match:
+for point in match_data:
     plt.axvline(x=point[0], ymin=0.01, color='r')
+
+# plotting standard matches to view difference
+
+for point in match_std:
+    plt.axvline(x=point, ymin=0.01, color='y')
 
 # The code below is for the test when Oxygen is used.
 # Not to be used for other elements
