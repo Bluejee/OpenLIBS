@@ -209,8 +209,8 @@ check_list_strong = ['H_Strong', 'He_Strong', 'Li_Strong', 'Be_Strong', 'B_Stron
 
 check_list_nobel_gas = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
 
-# check_list_custom = ['Sr', 'Ca']
-check_list_custom = ['Sn']
+check_list_custom = ['Zn_Strong']
+# check_list_custom = ['N_Strong', 'O_Strong', 'C_Strong', 'H_Strong']
 
 check_list_bronze_p = ['Cu', 'Sn']
 
@@ -225,9 +225,10 @@ check_list_empty = ['']
 # Input and Analysis
 
 data = data_input()
-peaks, indices = peak_analysis(data, 0)
+peaks, indices = peak_analysis(data, 4500)
 
-elements_present, match_data, match_std = element_comparison(peaks, check_list_custom, error_bar=0.2, match_threshold=3)
+elements_present, match_data, match_std = element_comparison(peaks, check_list_bronze_s, error_bar=0.2,
+                                                             match_threshold=3)
 
 # Results
 print('Data :: ')
@@ -236,9 +237,10 @@ print('Peaks :: ')
 print(peaks)
 print('Matched peaks :: ')
 print(match_data)
+print(match_std)
 print('Total number of Matched peaks = ', len(match_data))
 print('Elements present :: ')
-print(elements_present)
+print(elements_present, len(elements_present))
 plt.plot(data[:, 0], data[:, 1], 'k-')
 plt.plot(peaks[:, 0], peaks[:, 1], 'bo')
 
@@ -252,6 +254,14 @@ for point in match_data:
 
 for point in match_std:
     plt.axvline(x=point, ymin=0.01, color='y')
+
+# Plot details
+
+plt.title('Optical Emission Spectrum', fontsize=20)
+plt.xlabel('Wavelength (nm)', fontsize=20)
+plt.ylabel('Intensity (a.u.)', fontsize=20)
+plt.xticks(fontsize=15)
+plt.yticks(fontsize=15)
 
 # The code below is for the test when Oxygen is used.
 # Not to be used for other elements
