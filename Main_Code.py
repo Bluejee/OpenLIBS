@@ -73,21 +73,58 @@ def peak_analysis(raw_data, cut_off):
 
 
 # Work in Progress.
-def wavelength_avg_half_maximum(peak_indices, peak_data, raw_data, error_bar=10):
+def wavelength_avg_half_maximum(peak_indices, raw_data):
     """
     This function will use the list of peaks, its indices and the raw data, to calculate the wavelength average, at half
-    the maximum intensity. This will take the intensity of the peak as the maximum, and then use the error bar to
-    calculate the x values at both the left and right side of the peak.
+    the maximum intensity. This will take the intensity of the peak as the maximum, and then find the closest point to
+    the half intensity value. The point can lie above or below the half intensity value, but should be minimum in error.
 
     :param peak_indices: The indices of the peaks in the raw data.
-    :param peak_data: The list of peaks and corresponding intensities.
     :param raw_data: The raw spectrum to be used in analysis.
-    :param error_bar: The factor within which the half intensity should lie for the wavelength to be selected.
+
     :return: a list of x and y data of the peaks where x is the wavelength average at half max intensity and y is the
     original intensity of the peak.
     """
 
+    # This has caused some errors as can be seen from the scratch Trial_Tests.py
+    # Hence fot now we are discarding the work.
+    # This can be taken up after we find a way to interpolate the line between the points or
+    # fit it with an equally spaced curve.
+    # as this will work best with equally spaced y values.
+
     new_peak_list = []
+    for i in peak_indices:
+
+        half_peak_int = raw_data[i, 1] / 2
+
+        # Finding the left point at half maximum intensity.
+        j = i
+        error = half_peak_int
+        while True:  # This will keep working till we find the point with least error
+            least_error_left = raw_data[j, 0]  # wavelength of least error on left
+            j = j - 1
+            if error < abs(raw_data[j, 1] - half_peak_int):  # if the initial error is smaller that's the point we want.
+                break
+            else:  # if the initial error is larger we set the new one as the error and repeat
+                error = abs(raw_data[j, 1] - half_peak_int)
+        print('Point of least error left =', least_error_left)
+
+        # Finding the right point at half maximum intensity.
+        j = i
+        error = half_peak_int
+        while True:  # This will keep working till we find the point with least error
+            least_error_right = raw_data[j, 0]  # wavelength of least error on left
+            j = j + 1
+            if error < abs(raw_data[j, 1] - half_peak_int):  # if the initial error is smaller that's the point we want.
+                break
+            else:  # if the initial error is larger we set the new one as the error and repeat
+                error = abs(raw_data[j, 1] - half_peak_int)
+        print('Point of least error right =', least_error_right)
+        wavelength_average = (least_error_left + least_error_right) / 2
+        print('wavelength_avg =', wavelength_average)
+        peak_at_index = [wavelength_average, raw_data[i, 1]]
+        new_peak_list.append(peak_at_index)
+    return new_peak_list
 
 
 # Work in Progress.
