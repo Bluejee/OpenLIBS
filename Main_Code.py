@@ -14,6 +14,7 @@ The program flow can be described as :
 from scipy.signal import find_peaks
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
 import matplotlib.lines as mlines  # for creating the legends
 
 
@@ -71,6 +72,57 @@ def peak_analysis(raw_data, cut_off):
     print('\nPeak List :: ')
     print(peak_list, '\n\n')
     return peak_list, peak_indices
+
+
+def continuum_removal(raw_data):
+    """
+    This function takes in the raw data and then returns a new data which will have the continuum removed.
+    The algorithm is to find the valley and then the valleys of the valleys to avoid jerky peaks, and then fit a
+    9th order polynomial through it. This is then subtracted from the main data to get a continuum removed spectrum.
+
+    :param raw_data:
+    :return: A list of x and y values for the new data in the same format of the raw data.
+    """
+
+    def function(x, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9):
+        return a0 + a1 * x + a2 * (x ** 2) + a3 * (x ** 3) + a4 * (x ** 4) + a5 * (x ** 5) + a6 * (x ** 6) + a7 * (
+                x ** 7) + a8 * (x ** 8) + a9 * (x ** 9)
+
+    # Finding the valleys of the data
+    peak_indices, _ = find_peaks(-raw_data[:, 1])
+    valleys = np.zeros((len(peak_indices), 2))
+    j = 0
+    for i in peak_indices:
+        valleys[j, 0] = raw_data[i, 0]
+        valleys[j, 1] = raw_data[i, 1]
+        j += 1
+
+    # Finding valleys of valleys
+    peak_indices, _ = find_peaks(-valleys[:, 1])
+    valley_of_valleys = np.zeros((len(peak_indices), 2))
+    j = 0
+    for i in peak_indices:
+        valley_of_valleys[j, 0] = valleys[i, 0]
+        valley_of_valleys[j, 1] = valleys[i, 1]
+        j += 1
+
+    # Fitting the valleys of the valleys using a 9th order polynomial and finding its y value corresponding to the
+    # x values of the data.
+
+    popt, pcov = curve_fit(function, valley_of_valleys[:, 0], valley_of_valleys[:, 1], [1, 1, 1, 1, 1, 1, 1, 1, 1, 1])
+    y_continuum = function(raw_data[:, 0], *popt)
+
+    # Subtracting the continuum from the spectrum.
+
+    raw_data[:, 1] = raw_data[:, 1] - y_continuum
+
+    # Setting the minimum value in the spectrum as 0 to correct the height of the spectrum
+    min_int = min(raw_data[:, 1])
+
+    for i in range(len(raw_data)):
+        raw_data[i, 1] -= min_int
+
+    return raw_data
 
 
 # Work in Progress.
@@ -263,6 +315,10 @@ check_list_empty = ['']
 # Input and Analysis
 
 data = data_input()
+plt.plot(data[:,0],data[:,1],'r')
+data = continuum_removal(data)
+plt.plot(data[:,0],data[:,1],'g')
+plt.show()
 peaks, indices = peak_analysis(data, 5000)
 
 elements_present, match_data, match_std = element_comparison(peaks, check_list_strong, error_bar=0.1,
@@ -339,8 +395,5 @@ plt.legend(handles=[spectral_plot, detected_peaks_plot, matched_peak_plot, yello
 
 plt.show()
 # End Test
-
-# Location for the 3 samples
-# E:\Official_Project_Work\Spectra\Sample1.csv
 
 print('Thank You')
