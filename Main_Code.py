@@ -14,6 +14,7 @@ The program flow can be described as :
 from scipy.signal import find_peaks
 import numpy as np
 import matplotlib.pyplot as plt
+import matplotlib.lines as mlines  # for creating the legends
 
 
 # Functions
@@ -246,8 +247,8 @@ check_list_strong = ['H_Strong', 'He_Strong', 'Li_Strong', 'Be_Strong', 'B_Stron
 
 check_list_nobel_gas = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
 
-check_list_custom = ['Zn_Strong']
-# check_list_custom = ['N_Strong', 'O_Strong', 'C_Strong', 'H_Strong']
+# check_list_custom = ['Si', 'K', 'Br', 'Th', 'Ti']
+check_list_custom = ['N']
 
 check_list_bronze_p = ['Cu', 'Sn']
 
@@ -262,9 +263,9 @@ check_list_empty = ['']
 # Input and Analysis
 
 data = data_input()
-peaks, indices = peak_analysis(data, 4500)
+peaks, indices = peak_analysis(data, 5000)
 
-elements_present, match_data, match_std = element_comparison(peaks, check_list_bronze_s, error_bar=0.2,
+elements_present, match_data, match_std = element_comparison(peaks, check_list_strong, error_bar=0.1,
                                                              match_threshold=3)
 
 # Results
@@ -278,14 +279,17 @@ print(match_std)
 print('Total number of Matched peaks = ', len(match_data))
 print('Elements present :: ')
 print(elements_present, len(elements_present))
-plt.plot(data[:, 0], data[:, 1], 'k-')
-plt.plot(peaks[:, 0], peaks[:, 1], 'bo')
+spectral_plot, = plt.plot(data[:, 0], data[:, 1], 'k-',
+                          label='Spectral Data')  # , has been used to discard the second return from the plot function
+detected_peaks_plot, = plt.plot(peaks[:, 0], peaks[:, 1], 'bo', label='Detected peaks')
 
+matched_peak_plot, = plt.plot(match_data[:, 0], match_data[:, 1], 'go', label='Matched Peaks')
 # plotting lines instead of points for matched peaks
-plt.plot(match_data[:, 0], match_data[:, 1], 'go')
 
+'''
 for point in match_data:
     plt.axvline(x=point[0], ymin=0.01, color='r')
+'''
 
 # plotting standard matches to view difference
 
@@ -294,12 +298,17 @@ for point in match_std:
 
 # Plot details
 
-plt.title('Optical Emission Spectrum', fontsize=20)
-plt.xlabel('Wavelength (nm)', fontsize=20)
-plt.ylabel('Intensity (a.u.)', fontsize=20)
-plt.xticks(fontsize=15)
-plt.yticks(fontsize=15)
+plt.title('Optical Emission Spectrum', fontsize=30)
+plt.xlabel('Wavelength (nm)', fontsize=30)
+plt.ylabel('Intensity (a.u.)', fontsize=30)
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
+yellow_line_plot = mlines.Line2D([], [], color='yellow', label='Standard Lines From Database')
+# Creating an Empty legend to show detected elements.
+empty_legend_plot = mlines.Line2D([], [], color='none', label=('Elements Present = ' + str(elements_present)))
 
+plt.legend(handles=[spectral_plot, detected_peaks_plot, matched_peak_plot, yellow_line_plot, empty_legend_plot],
+           fontsize=20)
 # The code below is for the test when Oxygen is used.
 # Not to be used for other elements
 
