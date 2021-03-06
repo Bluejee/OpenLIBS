@@ -14,6 +14,7 @@ The program flow can be described as :
 from scipy.signal import find_peaks
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
 from scipy.optimize import curve_fit
 import matplotlib.lines as mlines  # for creating the legends
 
@@ -220,11 +221,18 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
     standard_matched_peaks = []
     # matched_peaks will have all the matched peaks of all elements
 
+    # Opening the log file to print data into the file.
+    log_file = open("log.txt", "w")
+
+    # By default the print function outputs to the console screen, to make it print to a file, we can change its path.
+    # We initialy save the current output stream to a variable, change the out to the file we want, and then in the end,
+    # change it back to the actual output stream.
+
+    original_stdout = sys.stdout  # Save a reference to the original standard output
+    sys.stdout = log_file  # Change the standard output to the file we created.
+
     # Running through all elements in the given list.
     for element in element_list:
-        # Opening the log file to print data into the file.
-        log_file = open("log.txt", "w")
-
         standard_data = np.genfromtxt('Element_Database\\' + element + '.csv', delimiter=',')
         standard_data_len = len(standard_data)
         peak_data_len = len(peak_data)
@@ -275,6 +283,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
     # Closing the log file.
     log_file.close()
+    sys.stdout = original_stdout  # Reset the standard output to its original value
     return passed_elements, np.array(matched_peaks), np.array(standard_matched_peaks)
 
 
@@ -325,10 +334,10 @@ plt.plot(data[:, 0], data[:, 1], 'r')
 data = continuum_removal(data)
 plt.plot(data[:, 0], data[:, 1], 'g')
 plt.show()
-peaks, indices = peak_analysis(data, 5000)
+peaks, indices = peak_analysis(data, 0)
 
 elements_present, match_data, match_std = element_comparison(peaks, check_list_persistent, error_bar=0.2,
-                                                             match_threshold=3)
+                                                             match_threshold=1)
 
 # Expected peaks in any element
 E = 'Si'
