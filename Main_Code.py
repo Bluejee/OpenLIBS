@@ -19,6 +19,10 @@ from scipy.optimize import curve_fit
 import matplotlib.lines as mlines  # for creating the legends
 
 
+# By default the print function outputs to the console screen, to make it print to a file, we can change its path.
+# We initially save the current output stream to a variable, change the out to the file we want, and then in the end,
+# change it back to the actual output stream.
+
 # Functions
 def data_input():
     """
@@ -55,9 +59,9 @@ def peak_analysis(raw_data, cut_off):
     # _ is to just ignore the other return values
 
     peak_indices, _ = find_peaks(raw_data[:, 1], height=cut_off)
-    print('\nNumber of Peaks =', len(peak_indices))
-    print('Peak Indices :: ')
-    print(peak_indices)
+    # print('\nNumber of Peaks =', len(peak_indices))
+    # print('Peak Indices :: ')
+    # print(peak_indices)
 
     # Initialising the list of peaks using number of rows
     peak_list = np.zeros((len(peak_indices), 2))
@@ -70,8 +74,8 @@ def peak_analysis(raw_data, cut_off):
         peak_list[j, 1] = raw_data[i, 1]
         j += 1
 
-    print('\nPeak List :: ')
-    print(peak_list, '\n\n')
+    # print('\nPeak List :: ')
+    # print(peak_list, '\n\n')
     return peak_list, peak_indices
 
 
@@ -222,14 +226,10 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
     # matched_peaks will have all the matched peaks of all elements
 
     # Opening the log file to print data into the file.
-    log_file = open("log.txt", "w")
-
-    # By default the print function outputs to the console screen, to make it print to a file, we can change its path.
-    # We initialy save the current output stream to a variable, change the out to the file we want, and then in the end,
-    # change it back to the actual output stream.
+    element_comparison_log = open("Log_Files/Element_Comparison_Log.txt", "w")
 
     original_stdout = sys.stdout  # Save a reference to the original standard output
-    sys.stdout = log_file  # Change the standard output to the file we created.
+    sys.stdout = element_comparison_log  # Change the standard output to the file we created.
 
     # Running through all elements in the given list.
     for element in element_list:
@@ -282,7 +282,7 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
     # Now the passed_elements list will have all the elements in the sample.
 
     # Closing the log file.
-    log_file.close()
+    element_comparison_log.close()
     sys.stdout = original_stdout  # Reset the standard output to its original value
     return passed_elements, np.array(matched_peaks), np.array(standard_matched_peaks)
 
@@ -334,28 +334,52 @@ plt.plot(data[:, 0], data[:, 1], 'r')
 data = continuum_removal(data)
 plt.plot(data[:, 0], data[:, 1], 'g')
 plt.show()
-peaks, indices = peak_analysis(data, 0)
+peaks, indices = peak_analysis(data, 5000)
 
 elements_present, match_data, match_std = element_comparison(peaks, check_list_persistent, error_bar=0.2,
-                                                             match_threshold=1)
+                                                             match_threshold=3)
 
 # Expected peaks in any element
-E = 'Si'
-element_lines = np.genfromtxt('Element_Database/' + E + '.csv', delimiter=',')
-for point in element_lines:
-    check_lines = plt.axvline(x=point, ymin=0.01, ymax=0.75, label=('Standard Lines of ' + E))
+plot_choice = input('Do you want to display the lines of any one element along with the plot(y/n) :: ')
+if plot_choice in ['y', 'Y']:
+    plot_element = input('Enter the element do you want to display :: ')
+    element_lines = np.genfromtxt('Element_Database/' + plot_element + '.csv', delimiter=',')
+    for point in element_lines:
+        check_lines = plt.axvline(x=point, ymin=0.01, ymax=0.75, label=('Standard Lines of ' + plot_element))
 
 # Results
+original_stdout = sys.stdout  # Save a reference to the original standard output
+
+# Data
+log = open("Log_Files/Data_Log.txt", "w")
+sys.stdout = log  # Change the standard output to the file we created.
 print('Data :: ')
+np.set_printoptions(threshold=sys.maxsize)  # For not truncating the Data.
 print(data)
+log.close()
+
+# Peaks
+log = open("Log_Files/Peak_List_Log.txt", "w")
+sys.stdout = log  # Change the standard output to the file we created.
 print('Peaks :: ')
 print(peaks)
+log.close()
+
+# Match Data
+log = open("Log_Files/Matched_Peak_Log.txt", "w")
+sys.stdout = log  # Change the standard output to the file we created.
 print('Matched peaks :: ')
 print(match_data)
+print('\n\nStandard Peaks :: ')
 print(match_std)
 print('Total number of Matched peaks = ', len(match_data))
-print('Elements present :: ')
-print(elements_present, len(elements_present))
+log.close()
+
+sys.stdout = original_stdout
+
+print('\n\nElements present :: ', len(elements_present))
+print(elements_present)
+
 spectral_plot, = plt.plot(data[:, 0], data[:, 1], 'k-',
                           label='Spectral Data')  # , has been used to discard the second return from the plot function
 detected_peaks_plot, = plt.plot(peaks[:, 0], peaks[:, 1], 'bo', label='Detected peaks')
