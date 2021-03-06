@@ -368,11 +368,10 @@ log.close()
 # Match Data
 log = open("Log_Files/Matched_Peak_Log.txt", "w")
 sys.stdout = log  # Change the standard output to the file we created.
-print('Matched peaks :: ')
+print('Matched peaks :: ', len(match_data))
 print(match_data)
 print('\n\nStandard Peaks :: ')
 print(match_std)
-print('Total number of Matched peaks = ', len(match_data))
 log.close()
 
 sys.stdout = original_stdout
