@@ -222,6 +222,9 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
     # Running through all elements in the given list.
     for element in element_list:
+        # Opening the log file to print data into the file.
+        log_file = open("log.txt", "w")
+
         standard_data = np.genfromtxt('Element_Database\\' + element + '.csv', delimiter=',')
         standard_data_len = len(standard_data)
         peak_data_len = len(peak_data)
@@ -269,6 +272,9 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
         print('\n\n', num_matching_peaks, 'Peaks have matched for the element', element)
         print('Comparison Ends for element', element, '. \n\n')  # testing to delete
     # Now the passed_elements list will have all the elements in the sample.
+
+    # Closing the log file.
+    log_file.close()
     return passed_elements, np.array(matched_peaks), np.array(standard_matched_peaks)
 
 
@@ -299,9 +305,6 @@ check_list_strong = ['H_Strong', 'He_Strong', 'Li_Strong', 'Be_Strong', 'B_Stron
 
 check_list_nobel_gas = ['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn']
 
-# check_list_custom = ['Si', 'K', 'Br', 'Th', 'Ti']
-check_list_custom = ['N']
-
 check_list_bronze_p = ['Cu', 'Sn']
 
 check_list_brass_p = ['Cu', 'Zn']
@@ -312,17 +315,26 @@ check_list_brass_s = ['Cu_Strong', 'Zn_Strong']
 
 check_list_empty = ['']
 
+# check_list_custom = ['Mo','Yb','Pt','Cr','Th','Ir','Zr','Re','Dy','Pr','Ne','Gd','Cs','Ce']
+check_list_custom = ['Si']
+
 # Input and Analysis
 
 data = data_input()
-plt.plot(data[:,0],data[:,1],'r')
+plt.plot(data[:, 0], data[:, 1], 'r')
 data = continuum_removal(data)
-plt.plot(data[:,0],data[:,1],'g')
+plt.plot(data[:, 0], data[:, 1], 'g')
 plt.show()
 peaks, indices = peak_analysis(data, 5000)
 
-elements_present, match_data, match_std = element_comparison(peaks, check_list_strong, error_bar=0.1,
+elements_present, match_data, match_std = element_comparison(peaks, check_list_persistent, error_bar=0.2,
                                                              match_threshold=3)
+
+# Expected peaks in any element
+E = 'Si'
+element_lines = np.genfromtxt('Element_Database/' + E + '.csv', delimiter=',')
+for point in element_lines:
+    check_lines = plt.axvline(x=point, ymin=0.01, ymax=0.75, label=('Standard Lines of ' + E))
 
 # Results
 print('Data :: ')
@@ -340,12 +352,11 @@ spectral_plot, = plt.plot(data[:, 0], data[:, 1], 'k-',
 detected_peaks_plot, = plt.plot(peaks[:, 0], peaks[:, 1], 'bo', label='Detected peaks')
 
 matched_peak_plot, = plt.plot(match_data[:, 0], match_data[:, 1], 'go', label='Matched Peaks')
-# plotting lines instead of points for matched peaks
 
-'''
-for point in match_data:
-    plt.axvline(x=point[0], ymin=0.01, color='r')
-'''
+# plotting lines instead of points for matched peaks
+# for point in match_data:
+#     plt.axvline(x=point[0], ymin=0.01, color='r')
+
 
 # plotting standard matches to view difference
 
@@ -363,35 +374,13 @@ yellow_line_plot = mlines.Line2D([], [], color='yellow', label='Standard Lines F
 # Creating an Empty legend to show detected elements.
 empty_legend_plot = mlines.Line2D([], [], color='none', label=('Elements Present = ' + str(elements_present)))
 
-plt.legend(handles=[spectral_plot, detected_peaks_plot, matched_peak_plot, yellow_line_plot, empty_legend_plot],
+# Legends with element list and check_lines
+# plt.legend(handles=[spectral_plot, detected_peaks_plot, matched_peak_plot, yellow_line_plot, check_lines,
+# empty_legend_plot], fontsize=20)
+
+# Legends without element list and check_lines
+plt.legend(handles=[spectral_plot, detected_peaks_plot, matched_peak_plot, yellow_line_plot],
            fontsize=20)
-# The code below is for the test when Oxygen is used.
-# Not to be used for other elements
-
-# Expected peaks in Oxygen
-# oxygen = np.genfromtxt('Element_Database/O_Strong.csv', delimiter=',')
-# oxygen_y = np.zeros(len(oxygen))
-# oxygen_y = oxygen_y + 100000
-# plt.plot(oxygen, oxygen_y, 'yo')
-
-
-# The code below is for the test when copper is used.
-# Not to be used for other elements
-
-# Expected peaks in copper
-# copper = np.genfromtxt('Element_Database/Cu.csv', delimiter=',')
-# for point in copper:
-#    plt.axvline(x=point, ymin=0.01, ymax=0.75)
-
-# coppery = np.zeros(len(copper))
-# coppery = coppery + 100000
-# plt.plot(copper, coppery, 'yo')
-
-# Detected peeks = Blue dots
-# Expected peeks = yellow dots
-# Matched peeks = green dots
-# matched line = red
-
 
 plt.show()
 # End Test
