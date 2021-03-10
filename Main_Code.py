@@ -201,6 +201,30 @@ def peak_function_fit(peak_data, raw_data):
     """
 
 
+# Work in Progress.
+def manual_helper(peak_data, element_list, error_bar=0.1):
+    # Opening the log file to print data into the file.
+    manual_helper_log = open("Log_Files/Manual_Comparison_Log.txt", "w")
+    original_stdout = sys.stdout  # Save a reference to the original standard output
+    sys.stdout = manual_helper_log  # Change the standard output to the file we created.
+    print("Error Bar :: ", error_bar)
+    print()
+    print(" Std_Peak |   Error  |  Element ")
+    print("--------------------------------")
+    for peak in peak_data:
+        print("   Matched Peak :: %8.4f   " % (peak[0]))
+        for element in element_list:
+            standard_data = np.genfromtxt('Element_Database\\' + element + '.csv', delimiter=',')
+
+            for std_peak in standard_data:
+                if std_peak - error_bar <= peak[0] <= std_peak + error_bar:
+                    print(" %8.4f |  %6.3f  |" % (std_peak, peak[0] - std_peak), element)
+        print('\n')
+    # Closing the log file.
+    manual_helper_log.close()
+    sys.stdout = original_stdout  # Reset the standard output to its original value
+
+
 def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3):
     """
     This function will look through a database of csv files, in which each file is named as element.csv where element
@@ -324,19 +348,21 @@ check_list_brass_s = ['Cu_Strong', 'Zn_Strong']
 
 check_list_empty = ['']
 
-# check_list_custom = ['Mo','Yb','Pt','Cr','Th','Ir','Zr','Re','Dy','Pr','Ne','Gd','Cs','Ce']
-check_list_custom = ['Si']
+check_list_custom = ['Mo', 'Yb', 'Pt', 'Cr', 'Th', 'Ir', 'Zr', 'Re', 'Dy', 'Pr', 'Ne', 'Gd', 'Cs', 'Ce']
+check_list_input = [input("Enter Element to be checked :: ")]
 
 # Input and Analysis
 
 data = data_input()
 plt.plot(data[:, 0], data[:, 1], 'r')
-data = continuum_removal(data)
+# data = continuum_removal(data)
 plt.plot(data[:, 0], data[:, 1], 'g')
 plt.show()
-peaks, indices = peak_analysis(data, 5000)
+peaks, indices = peak_analysis(data, 103)
 
-elements_present, match_data, match_std = element_comparison(peaks, check_list_persistent, error_bar=0.2,
+manual_helper(peaks, check_list_strong, error_bar=0.1)
+
+elements_present, match_data, match_std = element_comparison(peaks, check_list_strong, error_bar=0.1,
                                                              match_threshold=3)
 
 # Expected peaks in any element
