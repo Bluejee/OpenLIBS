@@ -226,7 +226,7 @@ def manual_helper(peak_data, element_list, lower_limit_error, upper_limit_error,
     sys.stdout = original_stdout  # Reset the standard output to its original value
 
 
-def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3):
+def element_comparison(peak_data, element_list, lower_error_bar=0.1, upper_error_bar=0.1, match_threshold=3):
     """
     This function will look through a database of csv files, in which each file is named as element.csv where element
     will be the atomic symbol for the element it represents.
@@ -238,8 +238,10 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
 
     :param peak_data: The list of peaks in the given data.
     :param element_list: The list of elements to be checked from the database.
-    :param error_bar: The error in wavelength within which a peak can be matched with the standard,
-    set to 0.1nm as default.
+    :param lower_error_bar: The error in wavelength(on the negative side of the actual value.) within which a peak can
+    be matched with the standard, set to 0.1nm as default.
+    :param upper_error_bar: The error in wavelength(on the positive side of the actual value.) within which a peak can
+    be matched with the standard, set to 0.1nm as default.
     :param match_threshold: The number of peaks that has to match with the standard for the element to be present
     in the sample, set to 3 as default.
     :return: A list of elements that successfully passed the comparison and a list of matched peaks.
@@ -278,11 +280,11 @@ def element_comparison(peak_data, element_list, error_bar=0.1, match_threshold=3
             print('peak data value = ', peak_data[peak_data_pos, 0], 'std data value = ',
                   standard_data[standard_peak_pos])  # testing to delete
 
-            if peak_data[peak_data_pos, 0] > standard_data[standard_peak_pos] + error_bar:
+            if peak_data[peak_data_pos, 0] > standard_data[standard_peak_pos] + upper_error_bar:
                 standard_peak_pos += 1
                 print('Peak data is greater than standard data do increasing standard data.')  # testing to delete
-            elif standard_data[standard_peak_pos] - error_bar <= peak_data[peak_data_pos, 0] <= \
-                    standard_data[standard_peak_pos] + error_bar:
+            elif standard_data[standard_peak_pos] - lower_error_bar <= peak_data[peak_data_pos, 0] <= \
+                    standard_data[standard_peak_pos] + upper_error_bar:
                 # Using peak_data[peak_position] returns the x and y for plotting
                 print(
                     'peak data in the region of error so increasing peak data and standard data.')  # testing to delete
@@ -369,8 +371,8 @@ peaks, indices = peak_analysis(data, set_cutoff)
 manual_helper(peaks, check_list_custom, lower_limit_error=-0.3, upper_limit_error=0.3, error_bar=0.25)
 # manual_helper(peaks, check_list_persistent, error_bar=0.1)
 
-elements_present, match_data, match_std = element_comparison(peaks, check_list_custom, error_bar=0.25,
-                                                             match_threshold=3)
+elements_present, match_data, match_std = element_comparison(peaks, check_list_custom, lower_error_bar=0.2,
+                                                             upper_error_bar=0.6, match_threshold=3)
 
 # Expected peaks in any element
 plot_choice = input('Do you want to display the lines of any one element along with the plot(y/n) :: ')
