@@ -1,1700 +1,312 @@
-Error Bar ::  0.1
+Error Bar ::  0.25
 
  Std_Peak |   Error  |  Element 
 --------------------------------
-   Matched Peak :: 241.1330   
- 241.0842 |   0.049  | Li_Strong
- 241.0519 |   0.081  | Fe_Strong
- 241.1068 |   0.026  | Fe_Strong
- 241.1624 |  -0.029  | Co_Strong
- 241.1734 |  -0.040  | Pb_Strong
-
-
-   Matched Peak :: 246.2090   
- 246.1284 |   0.081  | Fe_Strong
- 246.1861 |   0.023  | Fe_Strong
- 246.2647 |  -0.056  | Fe_Strong
- 246.2790 |  -0.070  | W_Strong
- 246.1200 |   0.089  | Re_Strong
- 246.1840 |   0.025  | Re_Strong
- 246.1420 |   0.067  | Os_Strong
- 246.2764 |  -0.067  | Cm_Strong
-
-
-   Matched Peak :: 247.9620   
- 247.9776 |  -0.016  | Fe_Strong
- 248.0158 |  -0.054  | Fe_Strong
- 247.8930 |   0.069  | Ru_Strong
- 248.0130 |  -0.051  | Tm_Strong
- 248.0130 |  -0.051  | W_Strong
- 247.8945 |   0.068  | Pt_Strong
-
-
-   Matched Peak :: 248.3870   
- 248.3271 |   0.060  | Fe_Strong
- 248.3533 |   0.034  | Fe_Strong
- 248.4187 |  -0.032  | Fe_Strong
- 248.4245 |  -0.037  | Fe_Strong
- 248.3410 |   0.046  | Sn_Strong
- 248.4740 |  -0.087  | W_Strong
- 248.3920 |  -0.005  | Re_Strong
- 248.3940 |  -0.007  | Po_Strong
-
-
-   Matched Peak :: 249.1290   
- 249.0644 |   0.065  | Fe_Strong
- 249.0858 |   0.043  | Fe_Strong
- 249.1155 |   0.013  | Fe_Strong
- 249.1396 |  -0.011  | Fe_Strong
- 249.2150 |  -0.086  | Cu_Strong
- 249.0790 |   0.050  | Rh_Strong
- 249.0460 |   0.083  | Ta_Strong
- 249.0530 |   0.076  | Po_Strong
-
-
-   Matched Peak :: 249.3930   
- 249.4728 |  -0.080  | Be_Strong
- 249.3150 |   0.078  | Na_Strong
- 249.3185 |   0.075  | Fe_Strong
- 249.3264 |   0.067  | Fe_Strong
- 249.3080 |   0.085  | Ir_Strong
-
-
-   Matched Peak :: 249.9750   
- 249.8821 |   0.093  | Co_Strong
- 250.0190 |  -0.044  | Ga_Strong
- 250.0540 |  -0.079  | Ge_Strong
- 249.8777 |   0.097  | Pd_Strong
-
-
-   Matched Peak :: 250.4500   
- 250.4310 |   0.019  | Cr_Strong
- 250.3875 |   0.063  | Fe_Strong
- 250.4450 |   0.005  | Ta_Strong
- 250.4700 |  -0.020  | W_Strong
- 250.4600 |  -0.010  | Re_Strong
-
-
-   Matched Peak :: 250.7670   
- 250.6940 |   0.073  | Li_Strong
- 250.6897 |   0.077  | Si_Strong
- 250.7782 |  -0.011  | V_Strong
- 250.7900 |  -0.023  | Fe_Strong
- 250.7010 |   0.066  | Ru_Strong
- 250.7450 |   0.022  | Ta_Strong
- 250.8497 |  -0.083  | Pt_Strong
-
-
-   Matched Peak :: 251.2430   
- 251.1760 |   0.067  | Fe_Strong
- 251.2365 |   0.007  | Fe_Strong
- 251.2061 |   0.037  | Yb_Strong
- 251.2690 |  -0.026  | Hf_Strong
- 251.3030 |  -0.060  | Hf_Strong
- 251.2650 |  -0.022  | Ta_Strong
- 251.2870 |  -0.044  | Os_Strong
- 251.3250 |  -0.082  | Os_Strong
- 251.2580 |  -0.015  | Ir_Strong
-
-
-   Matched Peak :: 251.7160   
- 251.6789 |   0.037  | Ar_Strong
- 251.7661 |  -0.050  | Fe_Strong
- 251.8102 |  -0.094  | Fe_Strong
- 251.6880 |   0.028  | Hf_Strong
-
+   Matched Peak :: 251.8105   
+ 251.6112 |   0.199  | Si
+ 251.9202 |  -0.110  | Si
 
-   Matched Peak :: 251.9810   
- 251.9202 |   0.061  | Si_Strong
- 251.9622 |   0.019  | V_Strong
- 251.9510 |   0.030  | Cr_Strong
- 251.9047 |   0.076  | Fe_Strong
- 251.9823 |  -0.001  | Co_Strong
- 252.0520 |  -0.071  | Rh_Strong
- 252.0010 |  -0.020  | Re_Strong
-
-
-   Matched Peak :: 252.5070   
- 252.4108 |   0.096  | Si_Strong
- 252.5586 |  -0.052  | Ti_Strong
- 252.4292 |   0.078  | Fe_Strong
- 252.5388 |  -0.032  | Fe_Strong
- 252.4634 |   0.044  | Co_Strong
- 252.4974 |   0.010  | Co_Strong
- 252.4240 |   0.083  | Rb_Strong
- 252.4307 |   0.076  | Pt_Strong
-
-
-   Matched Peak :: 252.9280   
- 252.8509 |   0.077  | Si_Strong
- 252.9871 |  -0.059  | Ti_Strong
- 253.0183 |  -0.090  | V_Strong
- 252.9135 |   0.014  | Fe_Strong
- 252.8616 |   0.066  | Co_Strong
- 252.8970 |   0.031  | Co_Strong
- 253.0080 |  -0.080  | Co_Strong
- 252.8509 |   0.077  | Sb_Strong
- 252.8734 |   0.055  | Pt_Strong
-
-
-   Matched Peak :: 253.4540   
- 253.3987 |   0.055  | P_Strong
- 253.4709 |  -0.017  | Ar_Strong
- 253.4221 |   0.032  | Mn_Strong
- 253.3627 |   0.091  | Fe_Strong
- 253.4419 |   0.012  | Fe_Strong
- 253.5486 |  -0.095  | Fe_Strong
- 253.3801 |   0.074  | Co_Strong
- 253.3640 |   0.090  | W_Strong
- 253.4460 |   0.008  | Ir_Strong
-
-
-   Matched Peak :: 253.7690   
- 253.7919 |  -0.023  | Mn_Strong
- 253.6800 |   0.089  | Fe_Strong
- 253.8460 |  -0.077  | Mo_Strong
- 253.8670 |  -0.098  | Yb_Strong
- 253.8000 |  -0.031  | Os_Strong
- 253.7220 |   0.047  | Ir_Strong
-
-
-   Matched Peak :: 253.9790   
- 253.9487 |   0.030  | Li_Strong
- 253.8799 |   0.099  | Fe_Strong
- 253.8909 |   0.088  | Fe_Strong
- 253.8990 |   0.080  | Fe_Strong
- 254.0660 |  -0.087  | Fe_Strong
- 254.0510 |  -0.072  | Re_Strong
- 253.9207 |   0.058  | Pt_Strong
-
-
-   Matched Peak :: 254.2430   
- 254.1908 |   0.052  | Ti_Strong
- 254.1836 |   0.059  | Fe_Strong
- 254.2101 |   0.033  | Fe_Strong
- 254.3378 |  -0.095  | Fe_Strong
- 254.1953 |   0.048  | Co_Strong
- 254.2670 |  -0.024  | Mo_Strong
- 254.3230 |  -0.080  | Tc_Strong
- 254.2510 |  -0.008  | Os_Strong
- 254.2020 |   0.041  | Ir_Strong
-
-
-   Matched Peak :: 254.6100   
- 254.5979 |   0.012  | Fe_Strong
- 254.6670 |  -0.057  | Fe_Strong
- 254.6739 |  -0.064  | Co_Strong
- 254.5700 |   0.040  | Rh_Strong
- 254.6549 |  -0.045  | Sn_Strong
- 254.6800 |  -0.070  | Ta_Strong
- 254.5340 |   0.076  | W_Strong
- 254.6030 |   0.007  | Ir_Strong
-
-
-   Matched Peak :: 254.7140   
- 254.6670 |   0.047  | Fe_Strong
- 254.6739 |   0.040  | Co_Strong
- 254.7980 |  -0.084  | Se_Strong
- 254.6549 |   0.059  | Sn_Strong
- 254.6800 |   0.034  | Ta_Strong
- 254.7140 |   0.000  | W_Strong
-
-
-   Matched Peak :: 255.0290   
- 255.0020 |   0.027  | K_Strong
- 254.9548 |   0.074  | Cr_Strong
- 254.9395 |   0.090  | Fe_Strong
- 254.9462 |   0.083  | Fe_Strong
- 254.9613 |   0.068  | Fe_Strong
- 255.0027 |   0.026  | Fe_Strong
- 255.0683 |  -0.039  | Fe_Strong
- 254.9560 |   0.073  | Ru_Strong
- 255.1070 |  -0.078  | Ta_Strong
- 255.0380 |  -0.009  | W_Strong
-
-
-   Matched Peak :: 256.3380   
- 256.3642 |  -0.026  | Mn_Strong
- 256.2536 |   0.084  | Fe_Strong
- 256.3476 |  -0.010  | Fe_Strong
- 256.4034 |  -0.065  | Co_Strong
- 256.3160 |   0.022  | Os_Strong
- 256.4180 |  -0.080  | Ir_Strong
-
-
-   Matched Peak :: 256.7560   
- 256.7121 |   0.044  | Ne_Strong
- 256.7984 |  -0.042  | Al_Strong
- 256.6913 |   0.065  | Fe_Strong
- 256.7820 |  -0.026  | Te_Strong
-
-
-   Matched Peak :: 257.6960   
- 257.6103 |   0.086  | Mn_Strong
- 257.6690 |   0.027  | Fe_Strong
- 257.7922 |  -0.096  | Fe_Strong
- 257.7140 |  -0.018  | Eu_Strong
- 257.6820 |   0.014  | Hf_Strong
- 257.7370 |  -0.041  | Ta_Strong
- 257.7780 |  -0.082  | Ta_Strong
- 257.7260 |  -0.030  | Ir_Strong
-
-
-   Matched Peak :: 258.3210   
- 258.2583 |   0.063  | Fe_Strong
- 258.2240 |   0.097  | Co_Strong
- 258.3987 |  -0.078  | Nb_Strong
- 258.2790 |   0.042  | I_Strong
- 258.2540 |   0.067  | Hf_Strong
-
-
-   Matched Peak :: 258.6870   
- 258.6310 |   0.056  | Na_Strong
- 258.5876 |   0.099  | Fe_Strong
- 258.7220 |  -0.035  | Co_Strong
- 258.7524 |  -0.065  | Co_Strong
- 258.6790 |   0.008  | Re_Strong
-
-
-   Matched Peak :: 259.4140   
- 259.4960 |  -0.082  | Na_Strong
- 259.3640 |   0.050  | Ti_Strong
- 259.3720 |   0.042  | Mn_Strong
- 259.3710 |   0.043  | Mo_Strong
- 259.4421 |  -0.028  | Sn_Strong
-
-
-   Matched Peak :: 259.9870   
- 259.9904 |  -0.003  | Ti_Strong
- 259.8905 |   0.096  | Mn_Strong
- 259.9396 |   0.047  | Fe_Strong
- 259.9567 |   0.030  | Fe_Strong
- 259.9040 |   0.083  | Ir_Strong
- 259.9160 |   0.071  | Pa_Strong
-
-
-   Matched Peak :: 260.7660   
- 260.6826 |   0.083  | Fe_Strong
- 260.7087 |   0.057  | Fe_Strong
- 260.8558 |  -0.090  | Zn_Strong
- 260.7060 |   0.060  | Tm_Strong
- 260.7030 |   0.063  | Hf_Strong
- 260.8630 |  -0.097  | Ta_Strong
- 260.8500 |  -0.084  | Re_Strong
- 260.8250 |  -0.059  | Ir_Strong
-
-
-   Matched Peak :: 261.2850   
- 261.1874 |   0.098  | Fe_Strong
- 261.3824 |  -0.097  | Fe_Strong
- 261.3084 |  -0.023  | Mo_Strong
- 261.2060 |   0.079  | Ru_Strong
- 261.2304 |   0.055  | Sb_Strong
- 261.3400 |  -0.055  | Lu_Strong
- 261.3080 |  -0.023  | W_Strong
- 261.3820 |  -0.097  | W_Strong
- 261.3060 |  -0.021  | Os_Strong
- 261.3655 |  -0.080  | Pb_Strong
-
-
-   Matched Peak :: 261.4400   
- 261.3824 |   0.058  | Fe_Strong
- 261.4230 |   0.017  | Tc_Strong
- 261.3400 |   0.100  | Lu_Strong
- 261.3820 |   0.058  | W_Strong
- 261.3655 |   0.075  | Pb_Strong
- 261.4175 |   0.022  | Pb_Strong
-
-
-   Matched Peak :: 261.8550   
- 261.8145 |   0.041  | Mn_Strong
- 261.7617 |   0.093  | Fe_Strong
- 261.8370 |   0.018  | Cu_Strong
- 261.9260 |  -0.071  | Lu_Strong
-
-
-   Matched Peak :: 262.2170   
- 262.3107 |  -0.094  | Ne_Strong
- 262.2740 |  -0.057  | Hf_Strong
- 262.2210 |  -0.004  | W_Strong
- 262.1820 |   0.035  | Os_Strong
-
-
-   Matched Peak :: 262.6310   
- 262.5606 |   0.070  | Mn_Strong
- 262.5667 |   0.064  | Fe_Strong
- 262.5880 |   0.043  | Rh_Strong
-
-
-   Matched Peak :: 262.9420   
- 262.9885 |  -0.047  | Ne_Strong
- 262.9850 |  -0.043  | Mo_Strong
-
-
-   Matched Peak :: 263.1990   
- 263.1282 |   0.071  | Si_Strong
- 263.2354 |  -0.036  | Mn_Strong
- 263.1047 |   0.094  | Fe_Strong
- 263.1323 |   0.067  | Fe_Strong
- 263.2480 |  -0.049  | W_Strong
- 263.2700 |  -0.071  | W_Strong
-
-
-   Matched Peak :: 266.5480   
- 266.6020 |  -0.054  | Cr_Strong
- 266.4664 |   0.082  | Fe_Strong
- 266.5038 |   0.044  | Yb_Strong
- 266.4790 |   0.069  | Ir_Strong
-
-
-   Matched Peak :: 266.7540   
- 266.6812 |   0.073  | Fe_Strong
- 266.6740 |   0.080  | Co_Strong
- 266.8340 |  -0.080  | Eu_Strong
-
-
-   Matched Peak :: 268.5480   
- 268.4754 |   0.073  | Fe_Strong
- 268.5660 |  -0.018  | Eu_Strong
- 268.5080 |   0.040  | Lu_Strong
- 268.5170 |   0.031  | Ta_Strong
-
-
-   Matched Peak :: 269.3670   
- 269.4520 |  -0.085  | Ta_Strong
- 269.4230 |  -0.056  | Ir_Strong
-
-
-   Matched Peak :: 271.5090   
- 271.5664 |  -0.057  | V_Strong
- 271.4413 |   0.068  | Fe_Strong
- 271.5270 |  -0.018  | Rh_Strong
- 271.4670 |   0.042  | Ta_Strong
- 271.5500 |  -0.041  | W_Strong
- 271.5470 |  -0.038  | Re_Strong
- 271.4640 |   0.045  | Os_Strong
- 271.5360 |  -0.027  | Os_Strong
-
-
-   Matched Peak :: 272.8310   
- 272.8288 |   0.002  | Li_Strong
- 272.8315 |  -0.001  | Li_Strong
- 272.7539 |   0.077  | Fe_Strong
- 272.8900 |  -0.059  | Fe_Strong
- 272.8940 |  -0.063  | Rh_Strong
- 272.7780 |   0.053  | Eu_Strong
- 272.8950 |  -0.064  | Lu_Strong
- 272.7440 |   0.087  | Ta_Strong
- 272.7780 |   0.053  | Ta_Strong
-
-
-   Matched Peak :: 273.7960   
- 273.7309 |   0.065  | Fe_Strong
- 273.8760 |  -0.080  | Hf_Strong
-
-
-   Matched Peak :: 274.0480   
- 273.9547 |   0.093  | Fe_Strong
-
-
-   Matched Peak :: 274.4040   
- 274.3630 |   0.041  | Cr_Strong
- 274.3197 |   0.084  | Fe_Strong
- 274.3294 |   0.075  | Pt_Strong
-
-
-   Matched Peak :: 274.7580   
- 274.8549 |  -0.097  | Cd_Strong
- 274.6680 |   0.090  | Ta_Strong
- 274.8253 |  -0.067  | Au_Strong
- 274.7156 |   0.042  | Th_Strong
- 274.8039 |  -0.046  | Cm_Strong
- 274.8019 |  -0.044  | Bk_Strong
-
-
-   Matched Peak :: 275.0100   
- 275.0720 |  -0.062  | Cr_Strong
- 274.9322 |   0.078  | Fe_Strong
- 274.9486 |   0.061  | Fe_Strong
- 275.0141 |  -0.004  | Fe_Strong
- 275.0477 |  -0.038  | Yb_Strong
- 274.9830 |   0.027  | Ta_Strong
-
-
-   Matched Peak :: 275.4150   
- 275.3288 |   0.086  | Fe_Strong
- 275.4588 |  -0.044  | Ge_Strong
- 275.3878 |   0.027  | In_Strong
- 275.4170 |  -0.002  | Lu_Strong
- 275.3853 |   0.030  | Pt_Strong
- 275.4912 |  -0.076  | Pt_Strong
-
-
-   Matched Peak :: 275.6670   
- 275.7086 |  -0.042  | Cr_Strong
- 275.5736 |   0.093  | Fe_Strong
- 275.6550 |   0.012  | Am_Strong
-
-
-   Matched Peak :: 276.8280   
- 276.7870 |   0.041  | Tl_Strong
-
-
-   Matched Peak :: 278.0370   
- 277.9820 |   0.055  | Mg_Strong
- 277.9834 |   0.054  | Mg_Strong
- 278.0695 |  -0.033  | Cr_Strong
- 277.9977 |   0.039  | Ga_Strong
- 278.0220 |   0.015  | As_Strong
- 278.0037 |   0.033  | Mo_Strong
- 277.9370 |   0.100  | Hf_Strong
- 278.1290 |  -0.092  | Ir_Strong
- 278.0822 |  -0.045  | Au_Strong
- 278.0476 |  -0.011  | Bi_Strong
-
-
-   Matched Peak :: 278.4390   
- 278.4990 |  -0.060  | Mo_Strong
- 278.4656 |  -0.027  | Yb_Strong
- 278.3570 |   0.082  | Re_Strong
- 278.4826 |  -0.044  | Cm_Strong
-
-
-   Matched Peak :: 278.6400   
- 278.6310 |   0.009  | Os_Strong
- 278.7100 |  -0.070  | Es_Strong
-
-
-   Matched Peak :: 279.1420   
- 279.2019 |  -0.060  | Ne_Strong
- 279.0776 |   0.064  | Mg_Strong
-
-
-   Matched Peak :: 279.6450   
- 279.5530 |   0.092  | Mg_Strong
- 279.5780 |   0.067  | Tc_Strong
- 279.6930 |  -0.048  | Gd_Strong
- 279.7270 |  -0.082  | Tm_Strong
- 279.6630 |  -0.018  | Lu_Strong
- 279.6340 |   0.011  | Ta_Strong
- 279.6730 |  -0.028  | Os_Strong
- 279.7350 |  -0.090  | Ir_Strong
- 279.6110 |   0.034  | Es_Strong
-
-
-   Matched Peak :: 279.8940   
- 279.7998 |   0.094  | Mg_Strong
- 279.8270 |   0.067  | Mn_Strong
- 279.8211 |   0.073  | Yb_Strong
- 279.9930 |  -0.099  | W_Strong
-
-
-   Matched Peak :: 280.3450   
- 280.2706 |   0.074  | Mg_Strong
- 280.2494 |   0.096  | Ti_Strong
- 280.2810 |   0.064  | Tc_Strong
- 280.2840 |   0.061  | Eu_Strong
- 280.3236 |   0.021  | Pt_Strong
- 280.2560 |   0.089  | U_Strong
-
-
-   Matched Peak :: 281.6960   
- 281.6185 |   0.078  | Al_Strong
- 281.6158 |   0.080  | Mo_Strong
- 281.7440 |  -0.048  | Mo_Strong
- 281.6180 |   0.078  | Eu_Strong
- 281.7680 |  -0.072  | Hf_Strong
- 281.6902 |   0.006  | Pt_Strong
- 281.7958 |  -0.100  | U_Strong
-
-
-   Matched Peak :: 283.6410   
- 283.6710 |  -0.030  | C_Strong
- 283.5630 |   0.078  | Cr_Strong
- 283.7226 |  -0.082  | Zr_Strong
- 283.6900 |  -0.049  | Cd_Strong
- 283.6920 |  -0.051  | In_Strong
- 283.6400 |   0.001  | Ir_Strong
- 283.7295 |  -0.089  | Th_Strong
-
-
-   Matched Peak :: 284.0890   
- 284.1720 |  -0.083  | Na_Strong
- 283.9976 |   0.091  | Sn_Strong
- 284.1570 |  -0.068  | W_Strong
- 284.1600 |  -0.071  | Os_Strong
- 284.0220 |   0.067  | Ir_Strong
-
-
-   Matched Peak :: 285.2800   
- 285.2810 |  -0.001  | Na_Strong
- 285.3010 |  -0.021  | Na_Strong
- 285.2125 |   0.067  | Mg_Strong
- 285.3230 |  -0.043  | Mo_Strong
- 285.2030 |   0.077  | Cf_Strong
-
-
-   Matched Peak :: 285.6770   
- 285.6030 |   0.074  | W_Strong
-
-
-   Matched Peak :: 285.9250   
- 285.9490 |  -0.024  | Na_Strong
- 285.8910 |   0.034  | Cr_Strong
- 285.9110 |   0.014  | Tc_Strong
- 285.8290 |   0.096  | Te_Strong
- 285.9670 |  -0.042  | Eu_Strong
- 285.9392 |  -0.014  | Yb_Strong
- 285.9805 |  -0.056  | Yb_Strong
-
-
-   Matched Peak :: 288.2490   
- 288.1577 |   0.091  | Si_Strong
- 288.3174 |  -0.068  | Nb_Strong
- 288.1600 |   0.089  | Pr_Strong
- 288.2640 |  -0.015  | Ir_Strong
- 288.3446 |  -0.096  | Au_Strong
-
-
-   Matched Peak :: 292.7190   
- 292.7814 |  -0.062  | Nb_Strong
- 292.6740 |   0.045  | Tm_Strong
- 292.7420 |  -0.023  | Re_Strong
- 292.7534 |  -0.034  | Am_Strong
- 292.6489 |   0.070  | Bk_Strong
- 292.7907 |  -0.072  | Bk_Strong
-
-
-   Matched Peak :: 292.9630   
- 293.0502 |  -0.087  | Mo_Strong
- 292.9271 |   0.036  | Cd_Strong
- 292.9630 |   0.000  | Hf_Strong
- 292.9900 |  -0.027  | Hf_Strong
- 292.9789 |  -0.016  | Pt_Strong
- 292.8922 |   0.071  | Cm_Strong
-
-
-   Matched Peak :: 293.3530   
- 293.3054 |   0.048  | Mn_Strong
- 293.4298 |  -0.077  | Mo_Strong
- 293.4021 |  -0.049  | Ag_Strong
- 293.2630 |   0.090  | In_Strong
- 293.2700 |   0.083  | Ta_Strong
- 293.3550 |  -0.002  | Ta_Strong
- 293.3298 |   0.023  | Pu_Strong
- 293.3602 |  -0.007  | Pu_Strong
-
-
-   Matched Peak :: 293.7440   
- 293.7740 |  -0.030  | Na_Strong
- 293.6903 |   0.054  | Fe_Strong
- 293.7800 |  -0.036  | Hf_Strong
- 293.6680 |   0.076  | Ir_Strong
- 293.8297 |  -0.086  | Bi_Strong
- 293.6992 |   0.045  | Am_Strong
-
-
-   Matched Peak :: 293.9880   
- 294.0653 |  -0.077  | Ne_Strong
- 293.9308 |   0.057  | Mn_Strong
- 294.0331 |  -0.045  | Mn_Strong
- 294.0770 |  -0.089  | Hf_Strong
- 294.0060 |  -0.018  | Ta_Strong
- 294.0220 |  -0.034  | Ta_Strong
-
-
-   Matched Peak :: 294.2320   
- 294.2893 |  -0.057  | Ar_Strong
- 294.1372 |   0.095  | V_Strong
- 294.1499 |   0.082  | V_Strong
- 294.2319 |   0.000  | V_Strong
- 294.2388 |  -0.007  | V_Strong
- 294.3189 |  -0.087  | V_Strong
- 294.1543 |   0.078  | Nb_Strong
- 294.2140 |   0.018  | Ta_Strong
- 294.3140 |  -0.082  | Re_Strong
- 294.3150 |  -0.083  | Ir_Strong
- 294.2860 |  -0.054  | Th_Strong
- 294.1916 |   0.040  | U_Strong
- 294.1713 |   0.061  | Bk_Strong
-
-
-   Matched Peak :: 294.5230   
- 294.5110 |   0.012  | He_Strong
- 294.6044 |  -0.081  | Ne_Strong
- 294.4569 |   0.066  | V_Strong
- 294.5670 |  -0.044  | Ru_Strong
- 294.5907 |  -0.068  | Yb_Strong
- 294.4400 |   0.083  | W_Strong
-
-
-   Matched Peak :: 294.9630   
- 294.9629 |   0.000  | V_Strong
- 294.9205 |   0.043  | Mn_Strong
- 294.9492 |   0.014  | Ru_Strong
- 294.9530 |   0.010  | Os_Strong
- 295.0393 |  -0.076  | Am_Strong
-
-
-   Matched Peak :: 295.4490   
- 295.3940 |   0.055  | Fe_Strong
- 295.4200 |   0.029  | Hf_Strong
- 295.3560 |   0.093  | Ta_Strong
- 295.4222 |   0.027  | Au_Strong
-
-
-   Matched Peak :: 296.7610   
- 296.7184 |   0.043  | Ne_Strong
- 296.7225 |   0.038  | Ti_Strong
- 296.8374 |  -0.076  | V_Strong
- 296.7640 |  -0.003  | Cr_Strong
- 296.6898 |   0.071  | Fe_Strong
- 296.7290 |   0.032  | Te_Strong
- 296.6930 |   0.068  | Hf_Strong
- 296.7280 |   0.033  | Hg_Strong
- 296.7936 |  -0.033  | U_Strong
- 296.6843 |   0.077  | Pu_Strong
- 296.6712 |   0.090  | Am_Strong
-
-
-   Matched Peak :: 297.3900   
- 297.2997 |   0.090  | Ne_Strong
- 297.4719 |  -0.082  | Ne_Strong
- 297.4010 |  -0.011  | Sc_Strong
- 297.3132 |   0.077  | Fe_Strong
- 297.3235 |   0.066  | Fe_Strong
- 297.4588 |  -0.069  | Y_Strong
- 297.4094 |  -0.019  | Nb_Strong
- 297.3000 |   0.090  | Ho_Strong
- 297.3218 |   0.068  | Tm_Strong
-
-
-   Matched Peak :: 298.5520   
- 298.5849 |  -0.033  | Cr_Strong
- 298.6010 |  -0.049  | Cr_Strong
- 298.6466 |  -0.095  | Cr_Strong
- 298.5388 |   0.013  | Zr_Strong
- 298.6200 |  -0.068  | Rh_Strong
-
-
-   Matched Peak :: 299.5180   
- 299.5094 |   0.009  | Cr_Strong
- 299.4427 |   0.075  | Fe_Strong
- 299.4453 |   0.073  | Ni_Strong
- 299.4728 |   0.045  | Nb_Strong
- 299.4967 |   0.021  | Ru_Strong
- 299.4805 |   0.038  | Yb_Strong
- 299.4800 |   0.038  | Au_Strong
- 299.6180 |  -0.100  | Cm_Strong
-
-
-   Matched Peak :: 300.1930   
- 300.1668 |   0.026  | Ne_Strong
- 300.0948 |   0.098  | Fe_Strong
- 300.2485 |  -0.056  | Ni_Strong
- 300.2407 |  -0.048  | Er_Strong
- 300.2264 |  -0.033  | Pt_Strong
-
-
-   Matched Peak :: 300.3370   
- 300.4150 |  -0.078  | Na_Strong
- 300.2485 |   0.089  | Ni_Strong
- 300.3621 |  -0.025  | Ni_Strong
- 300.2407 |   0.096  | Er_Strong
- 300.3630 |  -0.026  | Ir_Strong
- 300.3210 |   0.016  | Po_Strong
- 300.4250 |  -0.088  | Am_Strong
-
-
-   Matched Peak :: 302.1640   
- 302.0671 |   0.097  | Cr_Strong
- 302.1576 |   0.006  | Cr_Strong
- 302.1073 |   0.057  | Fe_Strong
- 302.1498 |   0.014  | Hg_Strong
- 302.2210 |  -0.057  | U_Strong
-
-
-   Matched Peak :: 302.6430   
- 302.7016 |  -0.059  | Ne_Strong
- 302.5842 |   0.059  | Fe_Strong
- 302.6669 |  -0.024  | Yb_Strong
-
-
-   Matched Peak :: 303.8400   
- 303.7720 |   0.068  | Ne_Strong
- 303.7932 |   0.047  | Ni_Strong
- 303.9067 |  -0.067  | Ge_Strong
- 303.9356 |  -0.096  | In_Strong
- 303.8288 |   0.011  | Dy_Strong
- 303.8363 |   0.004  | Am_Strong
-
-
-   Matched Peak :: 304.8430   
- 304.7556 |   0.087  | Ne_Strong
- 304.7604 |   0.083  | Fe_Strong
- 304.9380 |  -0.095  | Ho_Strong
- 304.9092 |  -0.066  | Th_Strong
-
-
-   Matched Peak :: 305.8440   
- 305.9106 |  -0.067  | Ne_Strong
- 305.7446 |   0.099  | Fe_Strong
- 305.9086 |  -0.065  | Fe_Strong
- 305.7639 |   0.080  | Ni_Strong
- 305.8975 |  -0.054  | Eu_Strong
- 305.7450 |   0.099  | Ho_Strong
- 305.8660 |  -0.022  | Os_Strong
- 305.7939 |   0.050  | U_Strong
-
-
-   Matched Peak :: 305.9870   
- 305.9106 |   0.076  | Ne_Strong
- 306.0250 |  -0.038  | Na_Strong
- 306.0456 |  -0.059  | V_Strong
- 305.9086 |   0.078  | Fe_Strong
- 305.8975 |   0.090  | Eu_Strong
-
-
-   Matched Peak :: 306.7480   
- 306.7021 |   0.046  | Ge_Strong
- 306.7410 |   0.007  | Hf_Strong
- 306.7400 |   0.008  | Re_Strong
- 306.7700 |  -0.022  | Bi_Strong
- 306.7729 |  -0.025  | Th_Strong
-
-
-   Matched Peak :: 307.3650   
- 307.2986 |   0.066  | Ti_Strong
- 307.4369 |  -0.072  | Mo_Strong
- 307.3344 |   0.031  | Er_Strong
- 307.3080 |   0.057  | Tm_Strong
- 307.2880 |   0.077  | Hf_Strong
- 307.2783 |   0.087  | U_Strong
-
-
-   Matched Peak :: 307.6030   
- 307.5731 |   0.030  | Ne_Strong
- 307.5231 |   0.080  | Ti_Strong
- 307.5897 |   0.013  | Zn_Strong
- 307.6865 |  -0.083  | Nb_Strong
- 307.6920 |  -0.089  | Gd_Strong
-
-
-   Matched Peak :: 307.9340   
- 307.8651 |   0.069  | Ti_Strong
- 307.8750 |   0.059  | I_Strong
- 307.8905 |   0.043  | Tb_Strong
- 307.8828 |   0.051  | Th_Strong
- 308.0217 |  -0.088  | Th_Strong
-
-
-   Matched Peak :: 308.3140   
- 308.2153 |   0.099  | Al_Strong
- 308.3960 |  -0.082  | Rh_Strong
- 308.2340 |   0.080  | Ho_Strong
- 308.4020 |  -0.088  | Er_Strong
- 308.2430 |   0.071  | Re_Strong
-
-
-   Matched Peak :: 308.7390   
- 308.8166 |  -0.078  | Ne_Strong
- 308.8042 |  -0.065  | Ti_Strong
- 308.7620 |  -0.023  | Mo_Strong
- 308.6540 |   0.085  | Ho_Strong
-
-
-   Matched Peak :: 308.8820   
- 308.8166 |   0.065  | Ne_Strong
- 308.8042 |   0.078  | Ti_Strong
- 308.9102 |  -0.028  | Yb_Strong
-
-
-   Matched Peak :: 309.3550   
- 309.2901 |   0.065  | Ne_Strong
- 309.4006 |  -0.046  | Ne_Strong
- 309.2730 |   0.082  | Na_Strong
- 309.4450 |  -0.090  | Na_Strong
- 309.2984 |   0.057  | Mg_Strong
- 309.2710 |   0.084  | Al_Strong
- 309.2839 |   0.071  | Al_Strong
- 309.3402 |   0.015  | Ar_Strong
- 309.3102 |   0.045  | V_Strong
- 309.4176 |  -0.063  | Nb_Strong
- 309.3230 |   0.032  | Pa_Strong
- 309.3005 |   0.055  | U_Strong
-
-
-   Matched Peak :: 309.7790   
- 309.7131 |   0.066  | Ne_Strong
- 309.6890 |   0.090  | Mg_Strong
- 309.8600 |  -0.081  | Tm_Strong
- 309.6810 |   0.098  | Pt_Strong
-
-
-   Matched Peak :: 310.1100   
- 310.1790 |  -0.069  | K_Strong
- 310.2040 |  -0.094  | K_Strong
- 310.1557 |  -0.046  | Ni_Strong
- 310.1878 |  -0.078  | Ni_Strong
- 310.1344 |  -0.024  | Mo_Strong
- 310.0836 |   0.026  | Ru_Strong
- 310.0500 |   0.060  | Gd_Strong
- 310.1400 |  -0.030  | Hf_Strong
- 310.0670 |   0.043  | Re_Strong
- 310.0290 |   0.081  | Ir_Strong
- 310.0450 |   0.065  | Ir_Strong
-
-
-   Matched Peak :: 315.9710   
- 315.8869 |   0.084  | Ca_Strong
- 315.9820 |  -0.011  | Hf_Strong
- 315.9201 |   0.051  | Pu_Strong
-
-
-   Matched Peak :: 316.2970   
- 316.3740 |  -0.077  | Na_Strong
- 316.2586 |   0.038  | Ti_Strong
- 316.3401 |  -0.043  | Nb_Strong
- 316.2833 |   0.014  | Dy_Strong
- 316.2610 |   0.036  | Hf_Strong
-
-
-   Matched Peak :: 316.6710   
- 316.5977 |   0.073  | Zr_Strong
- 316.6620 |   0.009  | Ho_Strong
- 316.7224 |  -0.051  | Pt_Strong
-
-
-   Matched Peak :: 316.9020   
- 316.8550 |   0.047  | Ti_Strong
- 316.9992 |  -0.097  | Dy_Strong
- 316.9056 |  -0.004  | Yb_Strong
- 316.8390 |   0.063  | Hf_Strong
- 316.8370 |   0.065  | Re_Strong
- 316.9983 |  -0.096  | Cm_Strong
-
-
-   Matched Peak :: 318.0170   
- 317.9332 |   0.084  | Ca_Strong
- 318.0700 |  -0.053  | Cr_Strong
- 318.0285 |  -0.012  | Nb_Strong
- 318.0919 |  -0.075  | Yb_Strong
- 318.0950 |  -0.078  | Ta_Strong
- 318.0194 |  -0.002  | Th_Strong
-
-
-   Matched Peak :: 323.5050   
- 323.4513 |   0.054  | Ti_Strong
- 323.4123 |   0.093  | Zr_Strong
- 323.4161 |   0.089  | Ce_Strong
- 323.5940 |  -0.089  | Re_Strong
- 323.5840 |  -0.079  | Th_Strong
-
-
-   Matched Peak :: 323.6870   
- 323.6581 |   0.029  | Ti_Strong
- 323.6778 |   0.009  | Mn_Strong
- 323.6222 |   0.065  | Fe_Strong
- 323.6410 |   0.046  | Nb_Strong
- 323.7060 |  -0.019  | Mo_Strong
- 323.7020 |  -0.015  | Tc_Strong
- 323.6810 |   0.006  | Tm_Strong
- 323.5940 |   0.093  | Re_Strong
- 323.6737 |   0.013  | Cm_Strong
-
-
-   Matched Peak :: 323.9630   
- 323.9038 |   0.059  | Ti_Strong
- 324.0230 |  -0.060  | Tm_Strong
- 324.0186 |  -0.056  | Pb_Strong
- 324.0580 |  -0.095  | Pa_Strong
-
-
-   Matched Peak :: 324.2370   
- 324.1994 |   0.038  | Ti_Strong
- 324.3054 |  -0.068  | Ni_Strong
- 324.3160 |  -0.079  | Cu_Strong
- 324.2272 |   0.010  | Y_Strong
- 324.2698 |  -0.033  | Pd_Strong
- 324.1540 |   0.083  | Tm_Strong
- 324.2657 |  -0.029  | Cm_Strong
-
-
-   Matched Peak :: 326.2000   
- 326.1585 |   0.042  | Ti_Strong
- 326.2626 |  -0.063  | Mo_Strong
- 326.1055 |   0.095  | Cd_Strong
- 326.2331 |  -0.033  | Sn_Strong
- 326.1508 |   0.049  | Yb_Strong
- 326.2290 |  -0.029  | Os_Strong
- 326.2355 |  -0.035  | Pb_Strong
- 326.2668 |  -0.067  | Th_Strong
-
-
-   Matched Peak :: 334.2330   
- 334.1874 |   0.046  | Ti_Strong
- 334.1970 |   0.036  | Nb_Strong
- 334.2930 |  -0.060  | Yb_Strong
- 334.3071 |  -0.074  | Yb_Strong
- 334.2240 |   0.009  | Re_Strong
-
-
-   Matched Peak :: 334.9910   
- 334.9029 |   0.088  | Ti_Strong
- 334.9405 |   0.050  | Ti_Strong
- 335.0820 |  -0.091  | Rb_Strong
- 334.9060 |   0.085  | Nb_Strong
- 334.9520 |   0.039  | Nb_Strong
- 335.0397 |  -0.049  | Eu_Strong
- 335.0470 |  -0.056  | Gd_Strong
- 334.9987 |  -0.008  | Tm_Strong
- 335.0330 |  -0.042  | Pu_Strong
-
-
-   Matched Peak :: 336.1950   
- 336.2161 |  -0.021  | Ne_Strong
- 336.2707 |  -0.076  | Ne_Strong
- 336.1257 |   0.069  | Sc_Strong
- 336.1926 |   0.002  | Sc_Strong
- 336.0989 |   0.096  | Ti_Strong
- 336.1227 |   0.072  | Ti_Strong
- 336.1266 |   0.068  | Ti_Strong
- 336.1554 |   0.040  | Ni_Strong
- 336.2230 |  -0.028  | Gd_Strong
- 336.2610 |  -0.066  | Tm_Strong
- 336.2438 |  -0.049  | Yb_Strong
- 336.2546 |  -0.060  | Am_Strong
-
-
-   Matched Peak :: 337.3500   
- 337.2798 |   0.070  | Ti_Strong
- 337.2994 |   0.051  | Pd_Strong
- 337.2710 |   0.079  | Er_Strong
- 337.4173 |  -0.067  | Er_Strong
- 337.3750 |  -0.025  | W_Strong
-
-
-   Matched Peak :: 382.1861   
- 382.1483 |   0.038  | V_Strong
- 382.2002 |  -0.014  | V_Strong
- 382.2413 |  -0.055  | Zr_Strong
- 382.2091 |  -0.023  | Ru_Strong
- 382.2260 |  -0.040  | Rh_Strong
- 382.1800 |   0.006  | Pr_Strong
-
-
-   Matched Peak :: 382.7612   
- 382.8555 |  -0.094  | V_Strong
- 382.7823 |  -0.021  | Fe_Strong
- 382.6660 |   0.095  | Rb_Strong
- 382.6694 |   0.092  | Mo_Strong
- 382.8480 |  -0.087  | Rh_Strong
- 382.8385 |  -0.077  | Th_Strong
-
-
-   Matched Peak :: 382.9528   
- 382.9749 |  -0.022  | Ne_Strong
- 382.9355 |   0.017  | Mg_Strong
- 382.8555 |   0.097  | V_Strong
- 382.8876 |   0.065  | Mo_Strong
- 382.8850 |   0.068  | Nd_Strong
- 383.0470 |  -0.094  | Nd_Strong
- 383.0261 |  -0.073  | Tb_Strong
- 382.9270 |   0.026  | Ho_Strong
- 383.0482 |  -0.095  | Er_Strong
- 383.0020 |  -0.049  | Hf_Strong
-
-
-   Matched Peak :: 383.3835   
- 383.3348 |   0.049  | Cl_Strong
- 383.4216 |  -0.038  | V_Strong
- 383.3865 |  -0.003  | Mn_Strong
- 383.4368 |  -0.053  | Mn_Strong
- 383.4222 |  -0.039  | Fe_Strong
- 383.2889 |   0.095  | Y_Strong
- 383.3747 |   0.009  | Mo_Strong
- 383.3890 |  -0.005  | Rh_Strong
- 383.4650 |  -0.081  | In_Strong
- 383.4476 |  -0.064  | Sm_Strong
- 383.3740 |   0.010  | Ta_Strong
- 383.3315 |   0.052  | Cm_Strong
- 383.3480 |   0.036  | Bk_Strong
-
-
-   Matched Peak :: 383.9572   
- 384.0429 |  -0.086  | V_Strong
- 383.9779 |  -0.021  | Mn_Strong
- 384.0437 |  -0.087  | Fe_Strong
- 383.9699 |  -0.013  | Ru_Strong
- 383.8980 |   0.059  | Nd_Strong
- 383.9640 |  -0.007  | Gd_Strong
- 383.9907 |  -0.033  | Yb_Strong
- 383.9747 |  -0.018  | Th_Strong
- 383.9626 |  -0.005  | U_Strong
-
-
-   Matched Peak :: 385.7218   
- 385.7630 |  -0.041  | Cr_Strong
- 385.6372 |   0.085  | Fe_Strong
- 385.6458 |   0.076  | Ru_Strong
- 385.7551 |  -0.033  | Ru_Strong
- 385.6520 |   0.070  | Rh_Strong
- 385.6940 |   0.028  | Ho_Strong
- 385.7720 |  -0.050  | Ho_Strong
-
-
-   Matched Peak :: 386.1025   
- 386.0830 |   0.019  | Cl_Strong
- 386.0985 |   0.004  | Cl_Strong
- 386.1680 |  -0.066  | Ho_Strong
- 386.0910 |   0.011  | Hf_Strong
-
-
-   Matched Peak :: 386.3878   
- 386.4856 |  -0.098  | V_Strong
- 386.3872 |   0.001  | Zr_Strong
- 386.4332 |  -0.045  | Zr_Strong
- 386.3380 |   0.050  | Nb_Strong
- 386.4104 |  -0.023  | Mo_Strong
- 386.3330 |   0.055  | Nd_Strong
- 386.3400 |   0.048  | Nd_Strong
- 386.4025 |  -0.015  | Bi_Strong
- 386.3120 |   0.076  | Ac_Strong
- 386.3406 |   0.047  | Th_Strong
-
-
-   Matched Peak :: 390.6932   
- 390.7484 |  -0.055  | Sc_Strong
- 390.6177 |   0.075  | Kr_Strong
- 390.7910 |  -0.098  | Xe_Strong
- 390.7286 |  -0.035  | Ce_Strong
- 390.7840 |  -0.091  | Nd_Strong
- 390.7100 |  -0.017  | Eu_Strong
- 390.6311 |   0.062  | Er_Strong
- 390.6453 |   0.048  | U_Strong
- 390.6094 |   0.084  | Bk_Strong
-
-
-   Matched Peak :: 392.4320   
- 392.4526 |  -0.021  | Ti_Strong
- 392.4651 |  -0.033  | V_Strong
- 392.3486 |   0.083  | Ru_Strong
- 392.5093 |  -0.077  | Th_Strong
-
-
-   Matched Peak :: 393.4626   
- 393.3661 |   0.097  | Ca_Strong
- 393.4010 |   0.062  | V_Strong
- 393.4230 |   0.040  | Rh_Strong
- 393.4820 |  -0.019  | Nd_Strong
- 393.4790 |  -0.016  | Gd_Strong
- 393.4820 |  -0.019  | Gd_Strong
-
-
-   Matched Peak :: 394.4908   
- 394.4006 |   0.090  | Al_Strong
- 394.5586 |  -0.068  | Ru_Strong
- 394.4210 |   0.070  | Pm_Strong
- 394.5540 |  -0.063  | Gd_Strong
- 394.4679 |   0.023  | Dy_Strong
- 394.4420 |   0.049  | Er_Strong
- 394.4146 |   0.076  | Cm_Strong
-
-
-   Matched Peak :: 395.7494   
- 395.8201 |  -0.071  | Ti_Strong
- 395.8220 |  -0.073  | Zr_Strong
- 395.6750 |   0.074  | Pr_Strong
- 395.8000 |  -0.051  | Nd_Strong
- 395.7740 |  -0.025  | Pm_Strong
- 395.7670 |  -0.018  | Gd_Strong
- 395.7791 |  -0.030  | Dy_Strong
- 395.8100 |  -0.061  | Tm_Strong
- 395.7850 |  -0.036  | Pa_Strong
-
-
-   Matched Peak :: 396.2611   
- 396.2851 |  -0.024  | Ti_Strong
- 396.2350 |   0.026  | In_Strong
- 396.2450 |   0.016  | Pr_Strong
- 396.2210 |   0.040  | Nd_Strong
- 396.3120 |  -0.051  | Nd_Strong
- 396.2980 |  -0.037  | Sm_Strong
- 396.3030 |  -0.042  | Sm_Strong
- 396.2590 |   0.002  | Dy_Strong
-
-
-   Matched Peak :: 396.9578   
- 397.0072 |  -0.049  | H_Strong
- 396.9748 |  -0.017  | Cr_Strong
- 397.0528 |  -0.095  | Sm_Strong
- 396.9000 |   0.058  | Gd_Strong
- 397.0070 |  -0.049  | Pa_Strong
-
-
-   Matched Peak :: 397.4216   
- 397.3256 |   0.096  | O_Strong
- 397.3502 |   0.071  | Zr_Strong
- 397.4250 |  -0.003  | Cs_Strong
- 397.4850 |  -0.063  | Pr_Strong
- 397.3300 |   0.092  | Nd_Strong
- 397.3690 |   0.053  | Nd_Strong
- 397.4665 |  -0.045  | Sm_Strong
- 397.3980 |   0.024  | Gd_Strong
- 397.3575 |   0.064  | Er_Strong
- 397.4719 |  -0.050  | Er_Strong
-
-
-   Matched Peak :: 398.3015   
- 398.2714 |   0.030  | O_Strong
- 398.2480 |   0.053  | Ti_Strong
- 398.3901 |  -0.089  | Cr_Strong
- 398.2592 |   0.042  | Y_Strong
- 398.3138 |  -0.012  | Sm_Strong
- 398.3651 |  -0.064  | Dy_Strong
- 398.2331 |   0.068  | Er_Strong
- 398.3931 |  -0.092  | Hg_Strong
- 398.2230 |   0.078  | Pa_Strong
-
-
-   Matched Peak :: 399.0872   
- 399.0570 |   0.030  | V_Strong
- 398.9984 |   0.089  | Cr_Strong
- 399.1118 |  -0.025  | Cr_Strong
- 399.1677 |  -0.081  | Cr_Strong
- 399.1127 |  -0.026  | Zr_Strong
- 399.0100 |   0.077  | Nd_Strong
- 399.1740 |  -0.087  | Nd_Strong
- 399.0002 |   0.087  | Sm_Strong
- 399.0025 |   0.085  | Sm_Strong
- 399.0885 |  -0.001  | Yb_Strong
- 399.1731 |  -0.086  | Th_Strong
-
-
-   Matched Peak :: 399.9174   
- 399.8636 |   0.054  | Ti_Strong
- 399.8726 |   0.045  | V_Strong
- 399.8965 |   0.021  | Zr_Strong
- 399.9237 |  -0.006  | Ce_Strong
- 399.9120 |   0.005  | Pr_Strong
- 400.0173 |  -0.100  | Pr_Strong
- 399.8960 |   0.021  | Pm_Strong
- 399.9580 |  -0.041  | Ho_Strong
-
-
-   Matched Peak :: 400.6080   
- 400.5242 |   0.084  | Fe_Strong
- 400.6520 |  -0.044  | Te_Strong
- 400.5232 |   0.085  | Ce_Strong
- 400.5474 |   0.061  | Tb_Strong
- 400.5837 |   0.024  | Dy_Strong
- 400.5209 |   0.087  | U_Strong
-
-
-   Matched Peak :: 403.1759   
- 403.2520 |  -0.076  | Nb_Strong
- 403.1630 |   0.013  | Tc_Strong
- 403.1690 |   0.007  | La_Strong
- 403.1332 |   0.043  | Ce_Strong
- 403.1753 |   0.001  | Pr_Strong
- 403.1820 |  -0.006  | Nd_Strong
- 403.0880 |   0.088  | Gd_Strong
- 403.2284 |  -0.053  | Tb_Strong
- 403.0842 |   0.092  | Th_Strong
- 403.1760 |  -0.000  | Cm_Strong
-
-
-   Matched Peak :: 403.4044   
- 403.3809 |   0.023  | Ar_Strong
- 403.3068 |   0.098  | Mn_Strong
- 403.4485 |  -0.044  | Mn_Strong
- 403.3827 |   0.022  | Pr_Strong
- 403.3490 |   0.055  | Gd_Strong
- 403.4630 |  -0.059  | Ac_Strong
-
-
-   Matched Peak :: 404.6813   
- 404.7210 |  -0.040  | K_Strong
- 404.7797 |  -0.098  | Sc_Strong
- 404.7628 |  -0.081  | Y_Strong
- 404.6337 |   0.048  | Ce_Strong
- 404.7082 |  -0.027  | Pr_Strong
- 404.7160 |  -0.035  | Sm_Strong
- 404.5970 |   0.084  | Dy_Strong
- 404.7520 |  -0.071  | Ho_Strong
- 404.6955 |  -0.014  | Er_Strong
- 404.6563 |   0.025  | Hg_Strong
- 404.6930 |  -0.012  | Pa_Strong
- 404.7612 |  -0.080  | U_Strong
-
-
-   Matched Peak :: 406.4530   
- 406.4209 |   0.032  | Ti_Strong
- 406.5095 |  -0.056  | Ti_Strong
- 406.3928 |   0.060  | V_Strong
- 406.3594 |   0.094  | Fe_Strong
- 406.5128 |  -0.060  | Kr_Strong
- 406.4151 |   0.038  | Zr_Strong
- 406.4456 |   0.007  | Ru_Strong
- 406.4550 |  -0.002  | Sm_Strong
- 406.4570 |  -0.004  | Sm_Strong
- 406.5090 |  -0.056  | Ho_Strong
- 406.5068 |  -0.054  | Au_Strong
-
-
-   Matched Peak :: 407.2680   
- 407.2157 |   0.052  | O_Strong
- 407.2005 |   0.068  | Ar_Strong
- 407.2385 |   0.030  | Ar_Strong
- 407.1738 |   0.094  | Fe_Strong
- 407.2698 |  -0.002  | Zr_Strong
- 407.1773 |   0.091  | Ce_Strong
- 407.3475 |  -0.079  | Ce_Strong
- 407.3200 |  -0.052  | Gd_Strong
- 407.3119 |  -0.044  | Dy_Strong
- 407.1830 |   0.085  | Ho_Strong
- 407.3130 |  -0.045  | Ho_Strong
- 407.3510 |  -0.083  | Ho_Strong
-
-
-   Matched Peak :: 407.6749   
- 407.5862 |   0.089  | O_Strong
- 407.6628 |   0.012  | Ar_Strong
- 407.7710 |  -0.096  | Sr_Strong
- 407.7359 |  -0.061  | Y_Strong
- 407.6524 |   0.022  | Zr_Strong
- 407.6730 |   0.002  | Ru_Strong
- 407.7350 |  -0.060  | La_Strong
- 407.5844 |   0.090  | Ce_Strong
- 407.5840 |   0.091  | Pm_Strong
- 407.5845 |   0.090  | Sm_Strong
-
-
-   Matched Peak :: 408.6675   
- 408.7150 |  -0.047  | Sc_Strong
- 408.6720 |  -0.004  | La_Strong
- 408.6100 |   0.058  | Pm_Strong
- 408.7632 |  -0.096  | Er_Strong
- 408.6521 |   0.015  | Th_Strong
-
-
-   Matched Peak :: 408.8928   
- 408.8337 |   0.059  | Kr_Strong
- 408.8710 |   0.022  | Tc_Strong
- 408.9610 |  -0.068  | La_Strong
- 408.9680 |  -0.075  | Yb_Strong
- 408.8440 |   0.049  | Ac_Strong
- 408.8726 |   0.020  | Th_Strong
- 408.9291 |  -0.036  | Am_Strong
-
-
-   Matched Peak :: 412.0319   
- 412.0820 |  -0.050  | He_Strong
- 412.0990 |  -0.067  | He_Strong
- 411.9446 |   0.087  | V_Strong
- 412.1318 |  -0.100  | Co_Strong
- 412.0093 |   0.023  | Mo_Strong
- 412.0200 |   0.012  | Ho_Strong
- 411.9464 |   0.085  | Yb_Strong
-
-
-   Matched Peak :: 412.9239   
- 412.8299 |   0.094  | Y_Strong
- 412.9430 |  -0.019  | Nb_Strong
- 412.9930 |  -0.069  | Nb_Strong
- 412.8270 |   0.097  | Tc_Strong
- 412.8870 |   0.037  | Rh_Strong
- 412.9700 |  -0.046  | Eu_Strong
- 412.9423 |  -0.018  | Dy_Strong
- 412.9710 |  -0.047  | Cm_Strong
-
-
-   Matched Peak :: 413.1911   
- 413.2624 |  -0.071  | Li_Strong
- 413.2625 |  -0.071  | Li_Strong
- 413.2498 |  -0.059  | Cl_Strong
- 413.1724 |   0.019  | Ar_Strong
- 413.1989 |  -0.008  | V_Strong
- 413.2058 |  -0.015  | Fe_Strong
- 413.2427 |  -0.052  | Ba_Strong
- 413.2280 |  -0.037  | Gd_Strong
- 413.1504 |   0.041  | Er_Strong
- 413.1002 |   0.091  | Th_Strong
- 413.2753 |  -0.084  | Th_Strong
-
-
-   Matched Peak :: 414.4796   
- 414.3868 |   0.093  | Fe_Strong
- 414.5122 |  -0.033  | Kr_Strong
- 414.4950 |  -0.015  | Tc_Strong
- 414.5080 |  -0.028  | Tc_Strong
- 414.4160 |   0.064  | Ru_Strong
- 414.5737 |  -0.094  | Ru_Strong
- 414.4996 |  -0.020  | Ce_Strong
- 414.4412 |   0.038  | Tb_Strong
- 414.4360 |   0.044  | Re_Strong
-
-
-   Matched Peak :: 418.7122   
- 418.6240 |   0.088  | K_Strong
- 418.7559 |  -0.044  | Zr_Strong
- 418.6510 |   0.061  | Tc_Strong
- 418.7320 |  -0.020  | La_Strong
- 418.6596 |   0.053  | Ce_Strong
- 418.6821 |   0.030  | Dy_Strong
- 418.7615 |  -0.049  | Tm_Strong
- 418.8121 |  -0.100  | Am_Strong
-
-
-   Matched Peak :: 419.1064   
- 419.0713 |   0.035  | Ar_Strong
- 419.1029 |   0.004  | Ar_Strong
- 419.0082 |   0.098  | As_Strong
- 419.0880 |   0.018  | Nb_Strong
- 419.1605 |  -0.054  | Pr_Strong
- 419.0780 |   0.028  | Gd_Strong
- 419.1070 |  -0.001  | Gd_Strong
- 419.1630 |  -0.057  | Gd_Strong
- 419.1640 |  -0.058  | Dy_Strong
- 419.0697 |   0.037  | Er_Strong
-
-
-   Matched Peak :: 422.8070   
- 422.8158 |  -0.009  | Ar_Strong
- 422.7750 |   0.032  | Zr_Strong
- 422.7747 |   0.032  | Ce_Strong
- 422.7130 |   0.094  | Ho_Strong
- 422.7460 |   0.061  | Re_Strong
- 422.7387 |   0.068  | Th_Strong
-
-
-   Matched Peak :: 425.1799   
- 425.1185 |   0.061  | Ar_Strong
- 425.1201 |   0.060  | Y_Strong
- 425.1570 |   0.023  | Xe_Strong
- 425.2440 |  -0.064  | Nd_Strong
- 425.1730 |   0.007  | Gd_Strong
-
-
-   Matched Peak :: 425.5666   
- 425.5779 |  -0.011  | Ce_Strong
- 425.6393 |  -0.073  | Sm_Strong
- 425.6254 |  -0.059  | Th_Strong
-
-
-   Matched Peak :: 426.1672   
- 426.2019 |  -0.035  | Ga_Strong
- 426.2050 |  -0.038  | Nb_Strong
- 426.2270 |  -0.060  | Tc_Strong
- 426.1110 |   0.056  | Te_Strong
- 426.2090 |  -0.042  | Gd_Strong
- 426.0850 |   0.082  | Os_Strong
- 426.1886 |  -0.021  | Pu_Strong
-
-
-   Matched Peak :: 427.2796   
- 427.2169 |   0.063  | Ar_Strong
- 427.3140 |  -0.034  | Rb_Strong
- 427.2273 |   0.052  | Pr_Strong
- 427.3357 |  -0.056  | Th_Strong
-
-
-   Matched Peak :: 427.5784   
- 427.4806 |   0.098  | Cr_Strong
- 427.4970 |   0.081  | Tc_Strong
- 427.4980 |   0.080  | Tl_Strong
-
-
-   Matched Peak :: 429.0685   
- 429.0929 |  -0.024  | Ti_Strong
- 428.9733 |   0.095  | Cr_Strong
- 428.9935 |   0.075  | Ce_Strong
- 429.1345 |  -0.066  | Pa_Strong
-
-
-   Matched Peak :: 430.8897   
- 430.9239 |  -0.034  | Ar_Strong
- 430.9100 |  -0.020  | K_Strong
- 430.7902 |   0.099  | Fe_Strong
- 430.9620 |  -0.072  | Y_Strong
- 430.9012 |  -0.012  | Sm_Strong
- 430.8630 |   0.027  | Dy_Strong
- 430.9652 |  -0.076  | Am_Strong
-
-
-   Matched Peak :: 432.0278   
- 432.0745 |  -0.047  | Sc_Strong
- 431.9579 |   0.070  | Kr_Strong
- 431.9871 |   0.041  | Ru_Strong
- 431.9530 |   0.075  | Sm_Strong
- 432.0520 |  -0.024  | Gd_Strong
- 432.1110 |  -0.083  | Gd_Strong
- 432.1200 |  -0.092  | Gd_Strong
-
-
-   Matched Peak :: 432.7003   
- 432.6633 |   0.037  | Mn_Strong
- 432.6330 |   0.067  | Nb_Strong
- 432.6137 |   0.087  | Mo_Strong
- 432.7930 |  -0.093  | Nd_Strong
- 432.7120 |  -0.012  | Gd_Strong
- 432.6472 |   0.053  | Tb_Strong
- 432.7053 |  -0.005  | Pt_Strong
-
-
-   Matched Peak :: 435.0424   
- 434.9426 |   0.100  | O_Strong
- 435.1055 |  -0.063  | Cr_Strong
- 435.1360 |  -0.094  | Kr_Strong
- 434.9788 |   0.064  | Ce_Strong
- 435.0399 |   0.003  | Pr_Strong
- 435.1290 |  -0.087  | Nd_Strong
- 435.0730 |  -0.031  | Ho_Strong
- 434.9600 |   0.082  | Rn_Strong
-
-
-   Matched Peak :: 438.4809   
- 438.5059 |  -0.025  | Ne_Strong
- 438.5057 |  -0.025  | Ar_Strong
- 438.4710 |   0.010  | V_Strong
- 438.4974 |  -0.017  | Cr_Strong
- 438.5393 |  -0.058  | Ru_Strong
- 438.5650 |  -0.084  | Ru_Strong
- 438.5660 |  -0.085  | Nd_Strong
- 438.4530 |   0.028  | Ac_Strong
-
-
-   Matched Peak :: 440.6150   
- 440.6638 |  -0.049  | V_Strong
- 440.6880 |  -0.073  | Xe_Strong
- 440.5260 |   0.089  | Cs_Strong
- 440.5825 |   0.032  | Pr_Strong
-
-
-   Matched Peak :: 441.6355   
- 441.6974 |  -0.062  | O_Strong
- 441.7273 |  -0.092  | Ti_Strong
- 441.6469 |  -0.011  | V_Strong
- 441.5630 |   0.072  | Cd_Strong
- 441.6070 |   0.028  | Xe_Strong
-
-
-   Matched Peak :: 446.9641   
- 446.9705 |  -0.006  | V_Strong
- 446.9470 |   0.017  | Rb_Strong
- 446.8663 |   0.098  | Pr_Strong
-
-
-   Matched Peak :: 448.2408   
- 448.1811 |   0.060  | Ar_Strong
- 448.1530 |   0.088  | Tc_Strong
- 448.1600 |   0.081  | Pm_Strong
- 448.2422 |  -0.001  | Yb_Strong
- 448.2169 |   0.024  | Th_Strong
-
-
-   Matched Peak :: 455.3518   
- 455.3008 |   0.051  | Zr_Strong
- 455.2850 |   0.067  | Tc_Strong
- 455.4514 |  -0.100  | Ru_Strong
- 455.4033 |  -0.051  | Ba_Strong
-
-
-   Matched Peak :: 456.8981   
- 456.9057 |  -0.008  | Ne_Strong
-
-
-   Matched Peak :: 464.3062   
- 464.3080 |  -0.002  | N_Strong
- 464.2370 |   0.069  | K_Strong
- 464.3698 |  -0.064  | Y_Strong
- 464.3360 |  -0.030  | Pm_Strong
- 464.3760 |  -0.070  | Pm_Strong
- 464.2235 |   0.083  | Sm_Strong
-
-
-   Matched Peak :: 465.0539   
- 465.1285 |  -0.075  | Cr_Strong
- 465.1120 |  -0.058  | Cu_Strong
- 465.0509 |   0.003  | Ce_Strong
- 464.9670 |   0.087  | Nd_Strong
-
-
-   Matched Peak :: 504.3663   
- 504.3800 |  -0.014  | Cs_Strong
- 504.3830 |  -0.017  | Pr_Strong
- 504.4279 |  -0.062  | Sm_Strong
- 504.4040 |  -0.038  | Pt_Strong
- 504.4660 |  -0.100  | Np_Strong
-
-
-   Matched Peak :: 505.9400   
- 505.9480 |  -0.008  | Pt_Strong
-
-
-   Matched Peak :: 517.3822   
- 517.3740 |   0.008  | Ti_Strong
- 517.4810 |  -0.099  | Tc_Strong
- 517.4554 |  -0.073  | Ce_Strong
- 517.3905 |  -0.008  | Pr_Strong
- 517.3960 |  -0.014  | Cf_Strong
-
-
-   Matched Peak :: 518.5018   
-
-
-   Matched Peak :: 520.7399   
- 520.8320 |  -0.092  | Kr_Strong
- 520.6561 |   0.084  | Pr_Strong
- 520.8090 |  -0.069  | Pm_Strong
- 520.6440 |   0.096  | Eu_Strong
-
-
-   Matched Peak :: 526.9985   
- 527.0280 |  -0.030  | Be_Strong
- 527.0810 |  -0.083  | Be_Strong
- 527.0270 |  -0.029  | Ca_Strong
- 526.9538 |   0.045  | Fe_Strong
- 527.0356 |  -0.037  | Fe_Strong
- 527.0640 |  -0.066  | Pm_Strong
- 527.0950 |  -0.097  | Re_Strong
- 527.0512 |  -0.053  | Bi_Strong
-
-
-   Matched Peak :: 558.9994   
- 559.0120 |  -0.013  | Ca_Strong
- 558.9020 |   0.097  | Tc_Strong
-
-
-   Matched Peak :: 569.1573   
- 569.0910 |   0.066  | I_Strong
-
-
-   Matched Peak :: 569.8187   
- 569.8529 |  -0.034  | V_Strong
- 569.9150 |  -0.096  | Rb_Strong
-
-
-   Matched Peak :: 572.4629   
- 572.4121 |   0.051  | Rb_Strong
- 572.5310 |  -0.068  | Tc_Strong
-
-
-   Matched Peak :: 574.0045   
- 574.0660 |  -0.061  | La_Strong
-
-
-   Matched Peak :: 586.0918   
-
-
-   Matched Peak :: 586.9692   
- 586.8790 |   0.090  | Pm_Strong
-
-
-   Matched Peak :: 589.1616   
-
-
-   Matched Peak :: 591.5716   
- 591.5220 |   0.050  | Si_Strong
- 591.5400 |   0.032  | In_Strong
- 591.5385 |   0.033  | U_Strong
-
-
-   Matched Peak :: 596.1676   
-
-
-   Matched Peak :: 598.1354   
-
-
-   Matched Peak :: 616.4455   
- 616.3594 |   0.086  | Ne_Strong
- 616.4750 |  -0.029  | Ac_Strong
-
-
-   Matched Peak :: 623.3941   
-
-
-   Matched Peak :: 624.6954   
- 624.7560 |  -0.061  | Fe_Strong
-
-
-   Matched Peak :: 634.8705   
- 634.8508 |   0.020  | F_Strong
-
-
-   Matched Peak :: 637.2474   
-
-
-   Matched Peak :: 644.1520   
-
-
-   Matched Peak :: 646.5220   
- 646.4940 |   0.028  | Cd_Strong
-
-
-   Matched Peak :: 656.4142   
-
-
-   Matched Peak :: 657.9168   
- 657.8510 |   0.066  | La_Strong
-
-
-   Matched Peak :: 670.9811   
- 671.0420 |  -0.061  | Pt_Strong
-
-
-   Matched Peak :: 704.3539   
-
-
-   Matched Peak :: 705.8333   
- 705.9107 |  -0.077  | Ne_Strong
-
-
-   Matched Peak :: 715.1152   
-
-
-   Matched Peak :: 715.9575   
-
-
-   Matched Peak :: 723.5275   
- 723.5188 |   0.009  | Ne_Strong
-
-
-   Matched Peak :: 747.9897   
-
-
-   Matched Peak :: 766.6567   
-
-
-   Matched Peak :: 770.1676   
-
-
-   Matched Peak :: 777.5863   
- 777.5390 |   0.047  | O_Strong
-
-
-   Matched Peak :: 780.0543   
- 780.0212 |   0.033  | F_Strong
- 780.0270 |   0.027  | Rb_Strong
-
-
-   Matched Peak :: 795.2184   
-
-
-   Matched Peak :: 818.5894   
-
-
-   Matched Peak :: 819.8021   
-
-
-   Matched Peak :: 822.4272   
- 822.4740 |  -0.047  | Pt_Strong
-
-
-   Matched Peak :: 823.4360   
- 823.4636 |  -0.028  | Mg_Strong
-
-
-   Matched Peak :: 844.9081   
+
+   Matched Peak :: 280.3937   
+ 280.2706 |   0.123  | Mg
+
+
+   Matched Peak :: 285.6206   
+
+
+   Matched Peak :: 288.6024   
+
+
+   Matched Peak :: 309.3799   
+ 309.2730 |   0.107  | Na
+
+
+   Matched Peak :: 318.9733   
+
+
+   Matched Peak :: 324.4935   
+
+
+   Matched Peak :: 326.3313   
+
+
+   Matched Peak :: 335.8701   
+
+
+   Matched Peak :: 338.0672   
+
+
+   Matched Peak :: 338.7992   
+
+
+   Matched Peak :: 359.5923   
+
+
+   Matched Peak :: 361.4100   
+
+
+   Matched Peak :: 363.5900   
+ 363.5462 |   0.044  | Ti
+
+
+   Matched Peak :: 364.3164   
+ 364.2674 |   0.049  | Ti
+
+
+   Matched Peak :: 369.3965   
+
+
+   Matched Peak :: 373.0205   
+
+
+   Matched Peak :: 375.1931   
+ 374.9485 |   0.245  | Fe
+ 375.2858 |  -0.093  | Ti
+
+
+   Matched Peak :: 376.6408   
+
+
+   Matched Peak :: 384.5921   
+
+
+   Matched Peak :: 386.7575   
+
+
+   Matched Peak :: 389.6427   
+
+
+   Matched Peak :: 394.3260   
+
+
+   Matched Peak :: 397.9244   
+
+
+   Matched Peak :: 409.0560   
+
+
+   Matched Peak :: 413.7137   
+
+
+   Matched Peak :: 424.4388   
+
+
+   Matched Peak :: 432.2829   
+
+
+   Matched Peak :: 434.7751   
+
+
+   Matched Peak :: 436.1983   
+
+
+   Matched Peak :: 440.4646   
+
+
+   Matched Peak :: 443.3058   
+ 443.4960 |  -0.190  | Ca
+
+
+   Matched Peak :: 445.4352   
+ 445.4781 |  -0.043  | Ca
+ 445.5887 |  -0.154  | Ca
+ 445.6605 |  -0.225  | Ca
+
+
+   Matched Peak :: 446.1447   
+
+
+   Matched Peak :: 446.8540   
+
+
+   Matched Peak :: 447.5632   
+
+
+   Matched Peak :: 448.2722   
+ 448.1126 |   0.160  | Mg
+ 448.1325 |   0.140  | Mg
+
+
+   Matched Peak :: 448.9811   
+
+
+   Matched Peak :: 455.3543   
+
+
+   Matched Peak :: 456.7689   
+
+
+   Matched Peak :: 458.1829   
+
+
+   Matched Peak :: 463.1271   
+
+
+   Matched Peak :: 466.6540   
+
+
+   Matched Peak :: 470.1771   
+
+
+   Matched Peak :: 472.2890   
+
+
+   Matched Peak :: 482.8275   
+
+
+   Matched Peak :: 484.9309   
+
+
+   Matched Peak :: 485.6317   
+
+
+   Matched Peak :: 486.3323   
+
+
+   Matched Peak :: 487.0328   
+
+
+   Matched Peak :: 487.7331   
+
+
+   Matched Peak :: 488.4333   
+
+
+   Matched Peak :: 489.1333   
+
+
+   Matched Peak :: 491.9316   
+
+
+   Matched Peak :: 494.0286   
+
+
+   Matched Peak :: 497.8693   
+
+
+   Matched Peak :: 498.9159   
+ 499.1066 |  -0.191  | Ti
+
+
+   Matched Peak :: 503.0984   
+
+
+   Matched Peak :: 505.8834   
+
+
+   Matched Peak :: 507.9704   
+
+
+   Matched Peak :: 515.6092   
+
+
+   Matched Peak :: 516.3026   
+
+
+   Matched Peak :: 516.9959   
+
+
+   Matched Peak :: 520.4594   
+
+
+   Matched Peak :: 523.2270   
+
+
+   Matched Peak :: 525.3008   
+
+
+   Matched Peak :: 525.9917   
+
+
+   Matched Peak :: 527.3730   
+
+
+   Matched Peak :: 528.0634   
+
+
+   Matched Peak :: 528.7536   
+
+
+   Matched Peak :: 529.4436   
+
+
+   Matched Peak :: 557.5748   
+
+
+   Matched Peak :: 560.3022   
+
+
+   Matched Peak :: 560.9836   
+
+
+   Matched Peak :: 571.8586   
+
+
+   Matched Peak :: 575.9236   
+
+
+   Matched Peak :: 576.6004   
+
+
+   Matched Peak :: 587.7382   
+
+
+   Matched Peak :: 591.7745   
+
+
+   Matched Peak :: 613.5070   
+
+
+   Matched Peak :: 614.8371   
+
+
+   Matched Peak :: 615.5018   
+
+
+   Matched Peak :: 616.1663   
+ 616.2172 |  -0.051  | Ca
+
+
+   Matched Peak :: 616.8306   
+
+
+   Matched Peak :: 617.4947   
+
+
+   Matched Peak :: 618.1586   
+
+
+   Matched Peak :: 618.8222   
+
+
+   Matched Peak :: 633.3685   
+
+
+   Matched Peak :: 634.0273   
+
+
+   Matched Peak :: 636.6600   
+
+
+   Matched Peak :: 648.4647   
+
+
+   Matched Peak :: 654.3409   
+
+
+   Matched Peak :: 655.6444   
+
+
+   Matched Peak :: 656.2958   
+
+
+   Matched Peak :: 656.9470   
+
+
+   Matched Peak :: 777.2255   
+ 777.4170 |  -0.191  | O
+
+
+   Matched Peak :: 786.5032   
 
 

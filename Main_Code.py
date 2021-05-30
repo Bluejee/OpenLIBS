@@ -202,7 +202,7 @@ def peak_function_fit(peak_data, raw_data):
 
 
 # Work in Progress.
-def manual_helper(peak_data, element_list, error_bar=0.1):
+def manual_helper(peak_data, element_list, lower_limit_error, upper_limit_error, error_bar=0.1):
     # Opening the log file to print data into the file.
     manual_helper_log = open("Log_Files/Manual_Comparison_Log.txt", "w")
     original_stdout = sys.stdout  # Save a reference to the original standard output
@@ -218,7 +218,8 @@ def manual_helper(peak_data, element_list, error_bar=0.1):
 
             for std_peak in standard_data:
                 if std_peak - error_bar <= peak[0] <= std_peak + error_bar:
-                    print(" %8.4f |  %6.3f  |" % (std_peak, peak[0] - std_peak), element)
+                    if lower_limit_error < (peak[0] - std_peak) < upper_limit_error:
+                        print(" %8.4f |  %6.3f  |" % (std_peak, peak[0] - std_peak), element)
         print('\n')
     # Closing the log file.
     manual_helper_log.close()
@@ -348,21 +349,27 @@ check_list_brass_s = ['Cu_Strong', 'Zn_Strong']
 
 check_list_empty = ['']
 
-check_list_custom = ['Mo', 'Yb', 'Pt', 'Cr', 'Th', 'Ir', 'Zr', 'Re', 'Dy', 'Pr', 'Ne', 'Gd', 'Cs', 'Ce']
+check_list_custom = ['Fe', 'Mg', 'Si', 'Na', 'Ca', 'Ti', 'S', 'O']
+check_list_steel = ['Fe', 'Cr', 'Ni', 'Mn', 'Si', 'C', 'P', 'S', 'N']
 check_list_input = [input("Enter Element to be checked :: ")]
 
 # Input and Analysis
 
 data = data_input()
+set_cutoff = 140  # Using a variable to store the minimum intensity cutoff.
+
 plt.plot(data[:, 0], data[:, 1], 'r')
 # data = continuum_removal(data)
 plt.plot(data[:, 0], data[:, 1], 'g')
+plt.plot(data[[0, -1], 0], [set_cutoff, set_cutoff], 'k')  # to view cutoff
 plt.show()
-peaks, indices = peak_analysis(data, 103)
 
-manual_helper(peaks, check_list_strong, error_bar=0.1)
+peaks, indices = peak_analysis(data, set_cutoff)
 
-elements_present, match_data, match_std = element_comparison(peaks, check_list_strong, error_bar=0.1,
+manual_helper(peaks, check_list_custom, lower_limit_error=-0.3, upper_limit_error=0.3, error_bar=0.25)
+# manual_helper(peaks, check_list_persistent, error_bar=0.1)
+
+elements_present, match_data, match_std = element_comparison(peaks, check_list_custom, error_bar=0.25,
                                                              match_threshold=3)
 
 # Expected peaks in any element
