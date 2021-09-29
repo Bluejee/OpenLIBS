@@ -220,6 +220,7 @@ def manual_helper(peak_data, element_list, lower_limit_error, upper_limit_error,
                 if std_peak - error_bar <= peak[0] <= std_peak + error_bar:
                     if lower_limit_error < (peak[0] - std_peak) < upper_limit_error:
                         print(" %8.4f |  %6.3f  |" % (std_peak, peak[0] - std_peak), element)
+                        #print((peak[0] - std_peak))
         print('\n')
     # Closing the log file.
     manual_helper_log.close()
@@ -357,14 +358,20 @@ check_list_brass_s = ['Cu_Strong', 'Zn_Strong']
 
 check_list_empty = ['']
 
-check_list_custom = ['Fe', 'Mg', 'Si', 'Na', 'Ca', 'Ti', 'S', 'O']
+check_list_custom_p = ['H', 'He', 'Li', 'Be', 'B', 'C', 'N', 'O', 'F', 'Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl',
+                       'Ar', 'K', 'Ca', 'Sc', 'Ti', 'Cr', 'Mn', 'Fe', 'Co', 'Ni', 'Cu', 'Zn', 'Ga', 'Ge', 'As',
+                       'Se', 'Br', 'Kr', 'Rb', 'Sr', 'Ag', 'Cd', 'In', 'Sn', 'I', 'Ba', 'Nd', 'W', 'Pt',
+                       'Au', 'Hg', 'Pb', 'Th']
+
 check_list_steel = ['Fe', 'Cr', 'Ni', 'Mn', 'Si', 'C', 'P', 'S', 'N']
 check_list_input = [input("Enter Element to be checked :: ")]
 
 # Input and Analysis
+########################################################################################################################
+########################################################################################################################
 
 data = data_input()
-set_cutoff = 140  # Using a variable to store the minimum intensity cutoff.
+set_cutoff = 35  # Using a variable to store the minimum intensity cutoff.
 
 plt.plot(data[:, 0], data[:, 1], 'r')
 # data = continuum_removal(data)
@@ -374,13 +381,13 @@ plt.show()
 
 peaks, indices = peak_analysis(data, set_cutoff)
 
-manual_helper(peaks, check_list_custom, lower_limit_error=-0.3, upper_limit_error=0.3, error_bar=0.25)
+manual_helper(peaks, check_list_custom_p, lower_limit_error=-0.061, upper_limit_error=-0.060, error_bar=0.1)
 # manual_helper(peaks, check_list_persistent, error_bar=0.1)
 
 # for default use, the lower and upper error bar will have the same magnitude of the value, but the lower
 # one would be negative.
-elements_present, match_data, match_std = element_comparison(peaks, check_list_custom, lower_error_bar=0.2,
-                                                             upper_error_bar=0.6, match_threshold=3)
+elements_present, match_data, match_std = element_comparison(peaks, check_list_custom_p, lower_error_bar=-0.061,
+                                                             upper_error_bar=0.060, match_threshold=3)
 
 # Expected peaks in any element
 plot_choice = input('Do you want to display the lines of any one element along with the plot(y/n) :: ')
@@ -390,6 +397,8 @@ if plot_choice in ['y', 'Y']:
     for point in element_lines:
         check_lines = plt.axvline(x=point, ymin=0.01, ymax=0.75, label=('Standard Lines of ' + plot_element))
 
+########################################################################################################################
+########################################################################################################################
 # Results
 original_stdout = sys.stdout  # Save a reference to the original standard output
 
