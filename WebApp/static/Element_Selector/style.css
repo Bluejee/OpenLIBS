@@ -1,0 +1,29 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  float:left;
+
+}
+select{
+  padding:3pt;
+}
+button{
+  display:block;
+  padding:3pt;
+  height:44pt;
+  width:10%
+}
+#selectall{
+  background:blue;
+}
+
+#clear{
+  background:red;
+}
+
+#submit{
+  background:green;
+}
