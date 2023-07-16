@@ -6,6 +6,11 @@ This Software Gives one the ability to computationally perform the Analysis for 
 
 ## Notes
 ---
+16-07-2023
+
+This commit marks the rebuild of the repository. there are major changes in the implementation which would hopefully make this into a module which can be used in other programs.
+
+---
 23-02-2023
 
 This is a complete revamp of the existing repository. After its last update, i worked almost completely locally as the code was working and needed mostly minor improvements, or needed to be used for some specifc use cases, this caused the repo to become messed up and lose track of what was happening. I also started Experimenting on different forms of UIs and other things, and then the code got messed up and needed tons of refactoring before being pushed into git.
