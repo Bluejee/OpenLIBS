@@ -4,7 +4,7 @@ Laser Induced Breakdown Spectroscopy(LIBS) is a versatile tool to quantitatively
 using laser ablation. This Package Gives one the ability to computationally perform the Analysis for on a LIBS Spectra
 to obtain Qualitative information about the sample.
 
-## Help with <**OpenLIBS**>
+## Help with OpenLIBS
 
 If you need help regarding OpenLIBS, then please open an issue or reach out to me through any of the contacts you can find in my [GitHub Profile](https://github.com/Bluejee)
 

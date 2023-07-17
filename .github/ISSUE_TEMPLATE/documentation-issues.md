@@ -6,7 +6,6 @@ labels: documentation
 assignees: ''
 
 ---
-<!-- Changes to be made in the line below -->
 Please view the [Contributing Guidelines](https://github.com/Bluejee/OpenLIBS/blob/main/CONTRIBUTING.md) for information on Contributing.
 
 # Type of Issue

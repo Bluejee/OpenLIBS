@@ -7,7 +7,6 @@ assignees: ''
 
 ---
 
-<!-- Changes to be made in the line below -->
 Please view the [Contributing Guidelines](https://github.com/Bluejee/OpenLIBS/blob/main/CONTRIBUTING.md) for information on Contributing.
 
 **Is your feature request related to a problem? Please describe.**
