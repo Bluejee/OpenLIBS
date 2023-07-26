@@ -1,4 +1,4 @@
-persistent,wavelength,spectrum
+Line_type,Wavelength,Ionisation_State
 S,375.365,1
 S,430.776,1
 P,434.96000000000004,1
