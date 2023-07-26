@@ -47,7 +47,7 @@ def detect_element(peak_data, element, line_type='P', lower_error=0.1, upper_err
     """
 
     # Load the element data from the CSV file
-    element_file = os.path.join(os.path.dirname(__file__), 'Element_Database', f'{element}')
+    element_file = os.path.join(os.path.dirname(__file__), 'Element_Database', f'{element}.csv')
     element_data = pd.read_csv(element_file)
 
     # Filter the data based on peak_type (P or S)
@@ -77,7 +77,7 @@ def detect_element(peak_data, element, line_type='P', lower_error=0.1, upper_err
                     'Peak': peak_value,
                     'Intensity': peak_intensity,
                     'Standard_Wavelength': peak_info['Wavelength'],
-                    'Ionization_State': peak_info['Ionisation_state']
+                    'Ionization_State': peak_info['Ionisation_State']
                 })
 
     # Check if the number of matched peaks exceeds the match_threshold
