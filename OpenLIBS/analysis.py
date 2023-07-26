@@ -2,6 +2,7 @@
 This module contains the functions that are necessary to perform elemental analysis for a libs spectra.
 """
 import pandas as pd
+import os
 
 
 def detect_element(peak_data, element, line_type='P', lower_error=0.1, upper_error=0.1, match_threshold=3):
@@ -46,7 +47,7 @@ def detect_element(peak_data, element, line_type='P', lower_error=0.1, upper_err
     """
 
     # Load the element data from the CSV file
-    element_file = f"Element_Database/{element}.csv"
+    element_file = os.path.join(os.path.dirname(__file__), 'Element_Database', f'{element}')
     element_data = pd.read_csv(element_file)
 
     # Filter the data based on peak_type (P or S)
