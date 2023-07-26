@@ -15,7 +15,7 @@ setuptools.setup(
     keywords=['analysis', 'LIBS', 'spectroscopy', 'database', 'laser', 'Physics', 'Computation'],
     url='https://github.com/Bluejee/OpenLIBS',
     packages=['OpenLIBS'],
-    install_requires=['pandas==1.4.0'],
+    install_requires=['pandas>=1.4.0'],
     python_requires='>=3.7',
     license='GPL-3.0-or-later',
     classifiers=[
