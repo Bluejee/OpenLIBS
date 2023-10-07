@@ -1,8 +1,9 @@
 """
 This module contains the functions that are necessary to perform elemental analysis for a libs spectra.
 """
-import pandas as pd
 import os
+import pandas as pd
+
 
 
 def detect_element(peak_data, element, line_type='P', lower_error=0.1, upper_error=0.1, match_threshold=3):
